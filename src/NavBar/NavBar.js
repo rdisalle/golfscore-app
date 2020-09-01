@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './NavBar.css';
-import SignUpPage from '../SignUpPage/SignUpPage';
-import ViewCourseList from '../ViewCourseList/ViewList';
+import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
   render() {
@@ -11,8 +10,13 @@ class NavBar extends Component {
           <h1>GolfScore</h1>
         </div>
         <div className="SearchBar__controls">
-          <SignUpPage/>
-          <ViewCourseList info={this.props.info}/>
+            <Link to={'/sign-up-page'}>
+                Sign Up
+            </Link>
+            {' '}
+            <Link to={'/view-course-list'} info={this.props.info}>
+                View Your Course List
+            </Link>
         </div>
       </div>
     );

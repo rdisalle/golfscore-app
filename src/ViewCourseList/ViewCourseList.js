@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ViewCourseList.css';
 import CourseItem from '../CourseItem/CourseItem';
 
-class ViewCourses extends Component {
+class ViewCourseList extends Component {
   render() {
     const list = this.props.info
         .map((info, key) => <CourseItem {...info} key={key} />);
@@ -14,8 +14,8 @@ class ViewCourses extends Component {
   }
 }
 
-FilterableList.defaultProps = {
+ViewCourseList.defaultProps = {
   info: []
 };
 
-export default ViewCourses;
+export default ViewCourseList;

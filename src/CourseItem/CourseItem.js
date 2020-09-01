@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import './CourseItem.css';
+import { Link } from 'react-router-dom';
 
 class CourseItem extends Component {
   render() {
 
     return (
       <div className="CourseItem">
-        <div className="CourseItem__content">
-          <div className="CourseItem__name">{this.props.name}</div>
+        <div>
+          <Link to={`/course-page/${this.props.name}`}> 
+            {this.props.name}
+          </Link>
+          </div>
+          <div className="CourseItem__content">
           <div className="CourseItem__location">{this.props.location}</div>
           <div className="CourseItem__courseDistance">{this.props.courseDistance}</div>
           <div className="CourseItem__Par">{this.props.coursePar}</div>
@@ -33,6 +38,7 @@ class CourseItem extends Component {
           <div className="CourseItem__courseURL">{this.props.courseURL}</div>
         </div>
         <div className="CourseItem_commands">
+        
           <button>Edit</button>
           <button>Delete</button>
         </div>

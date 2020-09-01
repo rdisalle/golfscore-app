@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom'
 
 const INFO = [
   {"name":"East Lake Golf Course","location":"Atlanta, GA","courseDistance":"6,452 yds","coursePar":"72",
@@ -24,4 +25,8 @@ const INFO = [
     "courseURL":"https://www.cityclubmarietta.com/golf-course",  },
 ];
 
-ReactDOM.render(<App info={INFO}/>, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <App info={INFO}/>
+  </BrowserRouter>,
+  document.getElementById('root'));
