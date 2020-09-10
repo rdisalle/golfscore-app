@@ -13,7 +13,7 @@ class CoursePage extends Component {
         <div className="courseInfo">
           <div className="CourseItem__location">{this.props.location}</div>
           <div className="CourseItem__courseDistance">{this.props.courseDistance}</div>
-          <div className="CourseItem__Par">{this.props.coursePar}</div>
+          <div className="CourseItem__par">{this.props.coursePar}</div>
           <div className="CourseItem__courseParHoleOne">{this.props.courseParHoleOne}</div>
           <div className="CourseItem__courseParHoleTwo">{this.props.courseParHoleTwo}</div>
           <div className="CourseItem__courseParHoleThree">{this.props.courseParHoleThree}</div>
@@ -36,8 +36,16 @@ class CoursePage extends Component {
           <div className="CourseItem__courseURL">{this.props.courseURL}</div>
         </div>
         <div className="CourseItem_commands">
-          <button>Edit</button>
+          <Link to={'/edit-course-page'}>
+                Edit Course
+          </Link>
           <button>Delete</button>
+          <Link to={'/add-score-page'}>
+                Add Score
+          </Link>
+          <Link to={`/all-scores/${this.props.name}`}>
+                View Scores
+          </Link>
         </div>
       </div>
     );
