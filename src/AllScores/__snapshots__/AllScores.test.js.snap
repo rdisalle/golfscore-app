@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllScores component renders a .AllScores by default 1`] = `
+<div
+  className="AllScores"
+>
+  <ul
+    className="AllScores_list"
+  />
+  <Link
+    to="/add-score-page/undefined"
+  >
+    Add Score
+  </Link>
+</div>
+`;
+
+exports[`AllScores component renders a Score in ul for each score in array 1`] = `
+<ul
+  className="AllScores_list"
+/>
+`;

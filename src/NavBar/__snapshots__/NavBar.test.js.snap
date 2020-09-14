@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component renders a .NavBar by default 1`] = `
+<div
+  className="NavBar"
+>
+  <div
+    className="SearchBar__controls"
+  >
+    <Link
+      to="/"
+    >
+      Golfscore
+    </Link>
+     
+    <Link
+      to="/view-course-list"
+    >
+      View Your Course List
+    </Link>
+  </div>
+</div>
+`;

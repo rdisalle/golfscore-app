@@ -11,11 +11,7 @@ class LandingPage extends Component {
             Suspendisse condimentum efficitur vestibulum. Curabitur dignissim non nisi vitae lobortis. Praesent iaculis vehicula arcu, 
             elementum ornare enim tincidunt in.</p>
             <div>
-              <Link to={'/sign-up-page'}>
-                  Sign Up
-              </Link>
-              {' '}
-              <Link to={'/view-course-list'} info={this.props.info}>
+              <Link to={'/view-course-list'} >
                   View Your Course List
               </Link>
             </div>

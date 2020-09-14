@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewScorePage component renders a .ViewScorePage by default 1`] = `
+<section
+  className="ViewScorePage"
+>
+  <h2
+    className="CourseName"
+  />
+  <ScoresPage
+    course=""
+    delete={[Function]}
+    name=""
+    score_hole_eight=""
+    score_hole_eighteen=""
+    score_hole_eleven=""
+    score_hole_fifteen=""
+    score_hole_five=""
+    score_hole_four=""
+    score_hole_fourteen=""
+    score_hole_nine=""
+    score_hole_one=""
+    score_hole_seven=""
+    score_hole_seventeen=""
+    score_hole_six=""
+    score_hole_sixteen=""
+    score_hole_ten=""
+    score_hole_thirteen=""
+    score_hole_three=""
+    score_hole_twelve=""
+    score_hole_two=""
+    to_par=""
+    total_score=""
+  />
+</section>
+`;
+
+exports[`ViewScorePage component renders a Score with score prop 1`] = `null`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewCourseList component renders a .ViewCourseList by default 1`] = `
+<div
+  className="ViewCourseList"
+>
+  <Link
+    to="/add-course-page"
+  >
+    Add Course
+  </Link>
+  <ul
+    className="ViewCourseList_list"
+  />
+</div>
+`;
+
+exports[`ViewCourseList component renders a Course in ul for each course in array 1`] = `
+<ul
+  className="ViewCourseList_list"
+/>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseItem component renders a .CourseItem by default 1`] = `
+<section
+  className="CourseItem"
+>
+  <CoursePage
+    course_distance=""
+    course_par=""
+    course_par_hole_eight=""
+    course_par_hole_eighteen=""
+    course_par_hole_eleven=""
+    course_par_hole_fifteen=""
+    course_par_hole_five=""
+    course_par_hole_four=""
+    course_par_hole_fourteen=""
+    course_par_hole_nine=""
+    course_par_hole_one=""
+    course_par_hole_seven=""
+    course_par_hole_seventeen=""
+    course_par_hole_six=""
+    course_par_hole_sixteen=""
+    course_par_hole_ten=""
+    course_par_hole_thirteen=""
+    course_par_hole_three=""
+    course_par_hole_twelve=""
+    course_par_hole_two=""
+    course_summary=""
+    course_url=""
+    delete={[Function]}
+    location=""
+    name=""
+  />
+</section>
+`;
+
+exports[`CourseItem component renders a Course with course prop 1`] = `null`;

@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoursePage component renders a .CoursePage by default 1`] = `
+<div
+  className="CourseItem"
+>
+  <Link
+    to="/course-page/undefined"
+  />
+  <div
+    className="courseInfo"
+  >
+     
+     
+     
+    Par: 
+     
+     
+     
+    Hole:
+     
+    1: 
+     
+     
+     
+    2: 
+     
+     
+     
+    3: 
+     
+     
+     
+    4: 
+     
+     
+     
+    5: 
+     
+     
+     
+    6: 
+     
+     
+     
+    7: 
+     
+     
+     
+    8: 
+     
+     
+     
+    9: 
+     
+     
+     
+    10: 
+     
+     
+     
+    11: 
+     
+     
+     
+    12: 
+     
+     
+     
+    13: 
+     
+     
+     
+    14: 
+     
+     
+     
+    15: 
+     
+     
+     
+    16: 
+     
+     
+     
+    17: 
+     
+     
+     
+    18: 
+     
+     
+     
+     
+  </div>
+  <div
+    className="CourseItem_commands"
+  >
+    <Link
+      to="/edit-course-page/undefined"
+    >
+      Edit Course
+    </Link>
+    <button
+      className="Course_Delete"
+      onClick={[Function]}
+      type="button"
+    >
+      Delete
+    </button>
+    <Link
+      to="/add-score-page/undefined"
+    >
+      Add Score
+    </Link>
+    <Link
+      to="/all-scores/undefined"
+    >
+      View Scores
+    </Link>
+  </div>
+</div>
+`;
+
+exports[`CoursePage component renders the CoursePage given props 1`] = `
+<div
+  className="CourseItem"
+>
+  <Link
+    to="/course-page/1"
+  >
+    test-class-name
+  </Link>
+  <div
+    className="courseInfo"
+  >
+    test-class-name
+     
+     
+     
+    Par: 
+     
+     
+     
+    Hole:
+     
+    1: 
+     
+     
+     
+    2: 
+     
+     
+     
+    3: 
+     
+     
+     
+    4: 
+     
+     
+     
+    5: 
+     
+     
+     
+    6: 
+     
+     
+     
+    7: 
+     
+     
+     
+    8: 
+     
+     
+     
+    9: 
+     
+     
+     
+    10: 
+     
+     
+     
+    11: 
+     
+     
+     
+    12: 
+     
+     
+     
+    13: 
+     
+     
+     
+    14: 
+     
+     
+     
+    15: 
+     
+     
+     
+    16: 
+     
+     
+     
+    17: 
+     
+     
+     
+    18: 
+     
+     
+     
+     
+  </div>
+  <div
+    className="CourseItem_commands"
+  >
+    <Link
+      to="/edit-course-page/1"
+    >
+      Edit Course
+    </Link>
+    <button
+      className="Course_Delete"
+      onClick={[Function]}
+      type="button"
+    >
+      Delete
+    </button>
+    <Link
+      to="/add-score-page/1"
+    >
+      Add Score
+    </Link>
+    <Link
+      to="/all-scores/1"
+    >
+      View Scores
+    </Link>
+  </div>
+</div>
+`;

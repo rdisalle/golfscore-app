@@ -12,7 +12,8 @@ import AddScore from '../src/AddScore/AddScore'
 import AddCourse from '../src/AddCourse/AddCourse'
 import EditScore from '../src/EditScore/EditScore'
 import EditCourse from '../src/EditCourse/EditCourse'
-import GolfContext from '../src/GolfContext/GolfContext'
+import GolfContext from '../src/GolfContext'
+import config from '../src/config'
 
 class App extends Component {
   state = {
@@ -365,16 +366,17 @@ class App extends Component {
     <GolfContext.Provider value={value}>
       <main className='App'>
         <NavBar />
+        <h1>GolfScore</h1>
         <Route exact path="/" component={LandingPage} />
         <Route path="/sign-up-page" component={SignUpPage} />
-        <Route path="/add-score-page" component={AddScore} />
+        <Route path="/add-score-page/:courseId" component={AddScore} />
         <Route path="/add-course-page" component={AddCourse} />
-        <Route path="/edit-course-page" component={EditCourse} />
-        <Route path="/edit-score-page" component={EditScore} />
-        <Route path="/view-course-list" render={() => <ViewCourseList info={this.props.info} />} />
-        <Route path="/course-page/:courseId" render={(props) => <CourseItem {...props} info={this.props.info} />} />
-        <Route path="/all-scores/:courseId" render={(props) => <AllScores {...props} scores={this.props.scores} />} />
-        <Route path="/course-score/:scoreId" render={(props) => <ViewScorePage {...props} scores={this.props.scores} />} />
+        <Route path="/edit-course-page/:courseId" component={EditCourse} />
+        <Route path="/edit-score-page/:scoreId" component={EditScore} />
+        <Route path="/view-course-list" component={ViewCourseList} />
+        <Route path="/course-page/:courseId" component= {CourseItem} />
+        <Route path="/all-scores/:courseId" component={AllScores}/>
+        <Route path="/course-score/:scoreId" component={ViewScorePage} />
       </main>
     </GolfContext.Provider>
   );

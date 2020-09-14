@@ -7,16 +7,11 @@ class NavBar extends Component {
     return (
       <div className="NavBar">
         <div className="SearchBar__controls">
-            <Link to={'/sign-up-page'}>
-                Sign Up
-            </Link>
+            <Link to ="/">Golfscore</Link>
             {' '}
-            <Link to={'/view-course-list'} info={this.props.info}>
+            <Link to={'/view-course-list'} >
                 View Your Course List
             </Link>
-        </div>
-        <div className="NavBar__heading">
-          <h1>GolfScore</h1>
         </div>
       </div>
     );
