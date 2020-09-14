@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './AllScores.css';
 import ScoresPage from '../ScoresPage/ScoresPage'
 import { Link } from 'react-router-dom';
-import GolfContext from '../GolfContext'
+import GolfContext from '../GolfContext';
+import PropTypes from 'prop-types' 
 
 class AllScores extends Component {
     static defaultProps = {

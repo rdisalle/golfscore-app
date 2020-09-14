@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ViewScorePage.css';
 import ScoresPage from '../ScoresPage/ScoresPage'
 import GolfContext from '../GolfContext'
+import PropTypes from 'prop-types' 
 
 class ViewScorePage extends Component {
     static defaultProps = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
-import AllScores from './Allscores'
+import AllScores from './AllScores'
 
 describe(`AllScores component`, () => {
   const props = {

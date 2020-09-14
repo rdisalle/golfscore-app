@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './AddCourse.css';
 import config from '../config';
-import GolfContext from '../GolfContext'
+import GolfContext from '../GolfContext';
+import PropTypes from 'prop-types';
 
 class AddCourse extends Component {
     static contextType = GolfContext
