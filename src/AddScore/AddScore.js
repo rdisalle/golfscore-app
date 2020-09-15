@@ -41,14 +41,6 @@ class AddScore extends Component {
           </option>
         ))
       }
-      
-      parseCourseNames = () => {
-        return this.context.courses.map(course => (
-          <option key={course.name} name={course.name} value={course.name}>
-            {course.name}
-          </option>
-        ))
-      }
 
     
     handleFormSubmit = e => {
@@ -86,12 +78,6 @@ class AddScore extends Component {
     validateName = () => {
         if (this.context.newScore.name.value.length === 0) {
           return 'Name is required'
-        }
-      }
-
-    validateCourse= () => {
-        if (this.context.newScore.course.value.length === 0) {
-          return 'Course is required'
         }
       }
 
@@ -245,20 +231,18 @@ class AddScore extends Component {
                 } 
             />
             <label htmlFor="course">
-                Course Name:
-                {this.context.newScore.course.touched && <p>{this.validateCourse()}</p>}
+                Select Course Name:
             </label>
             <select 
-                type="text" 
-                name="course"
-                id="course"
+                name="course_id"
+                id="course_id"
                 required={true}
-                aria-label="course"
+                aria-label="course_id"
                 onChange={e =>
-                    this.context.updateNewScoreData(e.target.course, e.target.value)
+                    this.context.updateNewScoreData(e.target.course_id, e.target.value)
                 } 
             >
-            {this.parseCourseNames()}
+            {this.parseCourses()}
             </select>
             <label htmlFor="score_hole_one">
                 Hole One Score:

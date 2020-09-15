@@ -25,15 +25,20 @@ class AllScores extends Component {
             : scores.filter(score => score.course_id === JSON.parse(courseId))
     )
 
+    findCourse = (courses=[], courseId) =>
+    courses.find(course => course.id === JSON.parse(courseId))
+
     render() {
         const { courseId } = this.props.match.params
         const { scores=[] } = this.context
         const scoresForCourse = this.getScoresForCourse(scores, courseId)
+        const { courses } = this.context
+        const course = this.findCourse(courses, courseId) || { content: '' }
         return (
-            <div className="AllScores">
-                <div className="CourseName">
-                    {scoresForCourse.map(score => <h2>{score.course}</h2>)}
-                </div>
+            <div className="AllScores"> 
+                <h2>
+                    {course.name}
+                </h2>
                 <ul className="AllScores_list">
                     {scoresForCourse.map(score =>
                     <li key={score.id}>
