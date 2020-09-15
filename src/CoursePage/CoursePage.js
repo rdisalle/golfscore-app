@@ -3,7 +3,7 @@ import './CoursePage.css';
 import { Link } from 'react-router-dom';
 import GolfContext from '../GolfContext';
 import config from '../config';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 class CoursePage extends Component {
     static defaultProps = {
@@ -30,7 +30,7 @@ class CoursePage extends Component {
       course_par_hole_seventeen: '',
       course_par_hole_eighteen: '',
       course_summary: '',
-      course_url: ''
+      course_url: '',
     }
   
     static contextType = GolfContext;
@@ -120,6 +120,7 @@ class CoursePage extends Component {
           {course_summary}
           {' '}
           {course_url}
+          {' '}
         </div>
         <div className="CourseItem_commands">
           <Link to={`/edit-course-page/${id}`}>
@@ -171,6 +172,7 @@ CoursePage.propTypes = {
   course_par_hole_eighteen: PropTypes.string.isRequired,
   course_summary: PropTypes.string.isRequired,
   course_url: PropTypes.string.isRequired,
+  date_modified: PropTypes.string
 };
 
 export default CoursePage;

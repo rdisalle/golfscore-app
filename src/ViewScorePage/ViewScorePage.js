@@ -54,6 +54,7 @@ class ViewScorePage extends Component {
                 total_score={score.total_score}
                 to_par={score.to_par} 
                 delete= {this.onDelete}
+                date_modified={score.date_modified}
             />
         </section>
     );

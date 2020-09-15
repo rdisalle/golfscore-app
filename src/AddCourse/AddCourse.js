@@ -211,7 +211,7 @@ class AddCourse extends Component {
     return (
       <div className="AddCoursePage">
         <div className="AddCoursePage__heading">
-          <h1>Add Score!</h1>
+          <h1>Add Course!</h1>
         </div>
         <form 
             className="AddCourseForm"

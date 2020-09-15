@@ -41,6 +41,14 @@ class AddScore extends Component {
           </option>
         ))
       }
+      
+      parseCourseNames = () => {
+        return this.context.courses.map(course => (
+          <option key={course.name} name={course.name} value={course.name}>
+            {course.name}
+          </option>
+        ))
+      }
 
     
     handleFormSubmit = e => {
@@ -49,7 +57,7 @@ class AddScore extends Component {
         const newScore = {
             name: e.target.name.value,
             course: e.target.course.value,
-            course_id: e.target.course.value,
+            course_id: e.target.course_id.value,
             score_hole_one: e.target.score_hole_one.value,
             score_hole_two: e.target.score_hole_two.value,
             score_hole_three: e.target.score_hole_three.value,
@@ -236,18 +244,22 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.name, e.target.value)
                 } 
             />
-            <label htmlFor="course">Select a Course</label>
-            <select
+            <label htmlFor="course">
+                Course Name:
+                {this.context.newScore.course.touched && <p>{this.validateCourse()}</p>}
+            </label>
+            <select 
+                type="text" 
                 name="course"
                 id="course"
                 required={true}
-                aria-label="Select a course"
+                aria-label="course"
                 onChange={e =>
                     this.context.updateNewScoreData(e.target.course, e.target.value)
-                  }
+                } 
             >
-            {this.parseCourses()}
-          </select>
+            {this.parseCourseNames()}
+            </select>
             <label htmlFor="score_hole_one">
                 Hole One Score:
                 {this.context.newScore.score_hole_one.touched && <p>{this.validateScore_hole_one()}</p>}

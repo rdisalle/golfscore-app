@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import GolfContext from '../GolfContext';
 import config from '../config';
 import PropTypes from 'prop-types';
+import format from 'date-fns/format'
 
 class ScoresPage extends Component {
     static defaultProps = {
@@ -59,7 +60,7 @@ class ScoresPage extends Component {
   render() {
     const { id, name, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
         score_hole_eight, score_hole_nine, score_hole_ten, score_hole_eleven, score_hole_twelve, score_hole_thirteen, score_hole_fourteen, score_hole_fifteen, score_hole_sixteen,
-        score_hole_seventeen, score_hole_eighteen, total_score, to_par } = this.props
+        score_hole_seventeen, score_hole_eighteen, total_score, to_par, date_modified } = this.props
     return (
       <div className="ScoreItem">
         <div className="ScoreInfo">
@@ -106,6 +107,15 @@ class ScoresPage extends Component {
           {' '} 
           {to_par}
           {' '}
+          <div className='score__dates'>
+          <div className='score__dates-modified'>
+            Created:
+            {' '}
+            <span className='Date'>
+            {format(new Date(date_modified), "LLLL do yyyy")}
+            </span>
+          </div>
+        </div>
         </div>
         <div className="ScoresItem_commands">
             <Link to={`/edit-score-page/${id}`}>
