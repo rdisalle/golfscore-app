@@ -1,0 +1,19 @@
+.ViewScorePage {
+    border: 1px solid #4681A6;
+    margin: 20px;
+    padding: 10px;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .ViewScorePage {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) {
+    .ViewScorePage {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}

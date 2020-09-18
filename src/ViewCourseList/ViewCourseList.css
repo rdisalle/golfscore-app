@@ -1,5 +1,69 @@
+.ViewCourseList_link {
+    color: #4681A6;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.ViewCourseList_link:hover {
+    color: #025918;
+}
+
+.ViewCourseList_course-link {
+    color: #025918;
+    font-size: 25px;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.ViewCourseList_course-link:hover {
+    color: #4681A6;
+}
+
+.ViewCourseList_score {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.ViewCourseList_course {
+    border: 1px solid #4681A6;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
 .ViewCourseList_list {
+    color: black;
     list-style-type: none;
-    padding: 0px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.CourseList_data {
+    text-align: left;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .ViewCourseList_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .ViewCourseList_course {
+        width: 300px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) {
+    .ViewCourseList_link {
+        font-size: 30px;
+    }
+    .ViewCourseList_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .ViewCourseList_course {
+        width: 350px;
+    }
 }

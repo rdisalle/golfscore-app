@@ -4,6 +4,7 @@ exports[`AllScores component renders a .AllScores by default 1`] = `
 <div
   className="AllScores"
 >
+  <h2 />
   <ul
     className="AllScores_list"
   />

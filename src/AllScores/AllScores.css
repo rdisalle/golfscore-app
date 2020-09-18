@@ -1,5 +1,60 @@
 .AllScores_list {
+    color: black;
     list-style-type: none;
-    padding: 0px;
-    margin: 20px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.AllScores_score {
+    border: 1px solid #4681A6;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.AllScores_course {
+    color: #025918;
+    font-size: 25px;
+}
+
+.AllScores_add {
+    color: #4681A6;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.AllScores_viewLink {
+    color: #025918;
+    text-decoration: none;
+    border: 1px #4681A6 solid;
+    padding: 5px;
+    padding-right: 95px;
+    padding-left: 95px;
+    font-size: 15px;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .AllScores_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .AllScores_score {
+        width: 300px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) {
+    .AllScores_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .AllScores_score {
+        width: 500px;
+    }
 }

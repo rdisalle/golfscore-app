@@ -26,7 +26,7 @@ class CourseItem extends Component {
     const course = this.findCourse(courses, courseId) || { content: '' }
 
     return (
-      <section className='CourseItem'>
+      <section className="CourseItem">
             <CoursePage
               id={course.id}
               name={course.name}

@@ -19,23 +19,20 @@ class ViewCourseList extends Component {
   render() {
     const { courses=[], scores=[] } = this.context
     return (
-      <div className='ViewCourseList'>
-        <Link to={'/add-course-page'}>
+      <div className="ViewCourseList">
+        <Link className="ViewCourseList_link" to={'/add-course-page'}>
           Add Course
         </Link>
-        <ul className='ViewCourseList_list'>
+        <ul className="ViewCourseList_list">
           {courses.map(course =>
-            <li key={course.id}> 
+            <li className="ViewCourseList_course" key={course.id}> 
               <Link
-                className='ViewCourseList_course-link'
+                className="ViewCourseList_course-link"
                 to={`/course-page/${course.id}`}
               >
-                <span className='ViewCourseList_num-scores'>
-                  {this.countScoresForCourse(scores, course.id)}
-                </span>
                 {course.name}
               </Link>
-              <CoursePage className='CourseList_data'
+              <CoursePage className="CourseList_data"
                 id={course.id}
                 location={course.location}
                 course_distance={course.course_distance}
@@ -60,7 +57,13 @@ class ViewCourseList extends Component {
                 course_par_hole_eighteen={course.course_par_hole_eighteen}
                 course_summary={course.course_summary}
                 course_url={course.course_url}
+                delete= {this.onDelete}
               />
+              <div className="ViewCourseList_score">
+              <span className="ViewCourseList_num-scores">
+                  Scores: ({this.countScoresForCourse(scores, course.id)})
+              </span>
+          </div>
             </li>
           )}
         </ul>

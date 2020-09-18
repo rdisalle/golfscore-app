@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import config from '../config'
 
 const Required = () => (
-    <span className='EditScore_required'>*</span>
+    <span className="EditScore_required">*</span>
 )
 
 class EditScore extends Component {
@@ -24,7 +24,7 @@ class EditScore extends Component {
         error: null,
         id: '',
         name: '',
-        course: '',
+        date_modified: '',
         course_id: '',
         score_hole_one: '',
         score_hole_two: '',
@@ -63,7 +63,7 @@ class EditScore extends Component {
             this.setState({
                 id: responseData.id,
                 name: responseData.name,
-                course: responseData.course,
+                date_modified: responseData.date_modified,
                 course_id: responseData.course_id,
                 score_hole_one: responseData.score_hole_one,
                 score_hole_two: responseData.score_hole_two,
@@ -97,8 +97,8 @@ class EditScore extends Component {
         this.setState({ name: e.target.value })
     };
 
-    handleChangeCourse = e => {
-        this.setState({ course: e.target.value})
+    handleChangeDate_modified = e => {
+        this.setState({ date_modified: e.target.value})
     }
 
     handleChangeCourse_id = e => {
@@ -188,10 +188,10 @@ class EditScore extends Component {
     handleSubmit = e => {
         e.preventDefault()
         const { scoreId } = this.props.match.params
-        const { id, name, course, course_id, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
+        const { id, name, date_modified, course_id, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
             score_hole_eight, score_hole_nine, score_hole_ten, score_hole_eleven, score_hole_twelve, score_hole_thirteen, score_hole_fourteen, score_hole_fifteen, score_hole_sixteen,
             score_hole_seventeen, score_hole_eighteen, total_score, to_par } = this.state
-        const newScore = { id, name, course, course_id, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
+        const newScore = { id, name, date_modified, course_id, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
             score_hole_eight, score_hole_nine, score_hole_ten, score_hole_eleven, score_hole_twelve, score_hole_thirteen, score_hole_fourteen, score_hole_fifteen, score_hole_sixteen,
             score_hole_seventeen, score_hole_eighteen, total_score, to_par }
         fetch(`${config.API_ENDPOINT}/api/scores/${scoreId}`, {
@@ -208,7 +208,7 @@ class EditScore extends Component {
           .then(() => {
             this.resetFields(newScore)
             this.context.updateScore(newScore)
-            this.props.history.push(`/score-page/${scoreId}`)
+            this.props.history.push(`/course-score/${scoreId}`)
           })
           .catch(error => {
             console.error(error)
@@ -216,11 +216,19 @@ class EditScore extends Component {
           })
       }
 
+      parseCourses = () => {
+        return this.context.courses.map(course => (
+          <option key={course.id} name={course.id} value={course.id}>
+            {course.name}
+          </option>
+        ))
+      }
+
       resetFields = (newFields) => {
         this.setState({
             id: newFields.id || '',
             name: newFields.name || '',
-            course: newFields.course || '',
+            course_id: newFields.course_id || '',
             score_hole_one: newFields.score_hole_one || '',
             score_hole_two: newFields.score_hole_two || '',
             score_hole_three: newFields.score_hole_three || '',
@@ -232,7 +240,7 @@ class EditScore extends Component {
             score_hole_nine: newFields.score_hole_nine || '',
             score_hole_ten: newFields.score_hole_ten || '',
             score_hole_eleven: newFields.score_hole_eleven || '',
-            score_hole_twelve: newFields.score_hole_tweleve || '',
+            score_hole_twelve: newFields.score_hole_twelve || '',
             score_hole_thirteen: newFields.score_hole_thirteen || '',
             score_hole_fourteen: newFields.score_hole_fourteen || '',
             score_hole_fifteen: newFields.score_hole_fifteen || '',
@@ -250,28 +258,29 @@ class EditScore extends Component {
       };
 
   render() {
-    const { error, name, course, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
+    const { error, name, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
         score_hole_eight, score_hole_nine, score_hole_ten, score_hole_eleven, score_hole_twelve, score_hole_thirteen, score_hole_fourteen, score_hole_fifteen, score_hole_sixteen,
         score_hole_seventeen, score_hole_eighteen, total_score, to_par } = this.state
     return (
       <div className="EditScorePage">
-        <div className="EditScorePage__heading">
-          <h1>Edit Score!</h1>
+        <div className="EditScorePage_heading">
+          <h1>Edit Score</h1>
         </div>
         <form 
             className="EditScore_form"
             onSubmit={this.handleSubmit}
         >
-            <div className='EditScore__error' role='alert'>
+            <div className="EditScore__error" role='alert'>
             {error && <p>{error.message}</p>}
             </div>
-            <div>
+            <div className="EditScore_courseName">
                 <label>
                     Score Name:
                     {' '}
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_name"
                     id="score_name"
@@ -281,21 +290,21 @@ class EditScore extends Component {
                     onChange={this.handleChangeName} 
                 />
             </div>
-            <div>
+            <div className="EditScore_courseSelect">
                 <label>
-                    Course:
+                    Select Course:
                     {' '}
                     <Required />
                 </label>
-                <input 
-                    type="text" 
-                    name="course"
-                    id="course"
-                    placeholder="My Course"
+                <select 
+                    className="EditScorePage_form"
+                    name="course_id"
+                    id="course_id"
                     required
-                    value={course}
-                    onChange={this.handleChangeCourse} 
-                />
+                    onChange={this.handleChangeCourse_id} 
+                >
+                {this.parseCourses()}
+                </select>
             </div>
             <div>
                 <label>
@@ -304,6 +313,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="scpre_hole_one"
                     id="scpre_hole_one"
@@ -320,6 +330,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_two"
                     id="score_hole_two"
@@ -336,6 +347,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_three"
                     id="score_hole_three"
@@ -352,6 +364,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_four"
                     id="score_hole_four"
@@ -368,6 +381,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_five"
                     id="score_hole_five"
@@ -384,6 +398,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_six"
                     id="score_hole_six"
@@ -400,6 +415,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_seven"
                     id="score_hole_seven"
@@ -416,6 +432,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_eight"
                     id="score_hole_eight"
@@ -432,6 +449,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_nine"
                     id="score_hole_nine"
@@ -448,6 +466,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_ten"
                     id="score_hole_ten"
@@ -464,6 +483,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_eleven"
                     id="score_hole_eleven"
@@ -480,6 +500,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_twelve"
                     id="score_hole_twelve"
@@ -496,6 +517,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_thirteen"
                     id="score_hole_thirteen"
@@ -512,6 +534,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_fourteen"
                     id="score_hole_fourteen"
@@ -528,6 +551,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_fifteen"
                     id="score_hole_fifteenr"
@@ -544,6 +568,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_sixteen"
                     id="score_hole_sixteen"
@@ -560,6 +585,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_seventeen"
                     id="score_hole_seventeen"
@@ -576,6 +602,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="score_hole_eighteen"
                     id="score_hole_eighteen"
@@ -592,6 +619,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text"
                     name="total_score"
                     id="total_score"
@@ -608,6 +636,7 @@ class EditScore extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditScorePage_form"
                     type="text" 
                     name="to_par"
                     id="to_par"
@@ -617,12 +646,11 @@ class EditScore extends Component {
                     onChange={this.handleChangeTo_par} 
                 />
             </div>
-            <div className='EditCourse__buttons'>
-            <button type='button' onClick={this.handleClickCancel}>
+            <div className="EditScore_buttons">
+            <button className="EditScore_commandsCancel" type='button' onClick={this.handleClickCancel}>
               Cancel
             </button>
-            {' '}
-            <button type='submit'>
+            <button className="EditScore_commands" type='submit'>
               Save
             </button>
           </div>

@@ -6,11 +6,11 @@ class NavBar extends Component {
   render() {
     return (
       <div className="NavBar">
-        <div className="SearchBar__controls">
-            <Link to ="/">Golfscore</Link>
+        <div className="SearchBar_controls">
+            <Link className="Nav_Link" to ="/">Golfscore</Link>
             {' '}
-            <Link to={'/view-course-list'} >
-                View Your Course List
+            <Link className="Nav_Link" to={'/view-course-list'} >
+                View Courses
             </Link>
         </div>
       </div>

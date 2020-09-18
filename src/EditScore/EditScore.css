@@ -1,0 +1,85 @@
+.EditScorePage_heading {
+    color: #025918;
+    font-size: 20px;
+}
+
+.EditScorePage {
+    color: black;
+    border: 1px solid #4681A6;
+    margin: 10px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.EditScore_form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.EditScorePage_form {
+    margin-bottom: 15px;
+    display: block;
+    width: 300px;
+}
+
+.EditScore_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.EditScore_commands, .EditScore_commandsCancel {
+    width: 100px;
+    height: 30px;
+    color: #025918;
+    font-size: 15px;
+    background-color: white;
+    border: 1px #4681A6 solid;
+    font-family: 'Merriweather', serif;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .EditScorePage {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .EditScore_form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-flow: wrap;
+    }
+    .EditScore_courseName {
+        margin-right: 8px;
+    }
+    .EditScore_courseSelect {
+        margin-right: 8px;
+    }
+    .EditScore_commandsCancel {
+        margin-right: 200px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) {
+    .EditScorePage {
+        margin-left: 200px;
+        margin-right: 200px;
+        font-size: 20px;
+    }
+    .EditScore_form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-flow: wrap;
+    }
+    .EditScore_courseName {
+        margin-right: 28px;
+    }
+    .EditScore_courseSelect {
+        margin-right: 28px;
+    }
+    .EditScore_commandsCancel {
+        margin-right: 250px;
+    }
+}

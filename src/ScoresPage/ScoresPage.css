@@ -1,0 +1,50 @@
+.ScoresPage_list {
+    list-style-type: none;
+    padding: 0px;
+    text-align: center;
+}
+
+.ScorePage_hole {
+    display: inline-block;
+    margin-right: 14px;
+    font-size: 16px;
+}
+
+.ScoresPage_name {
+    font-size: 20px;
+    color: #025918;
+}
+
+.ScoresPage_total, .ScoresPage_toPar {
+    font-size: 20px;
+}
+
+.ScoresPage_link {
+    color: #025918;
+    text-decoration: none;
+    border: 1px #4681A6 solid;
+    padding: 5px;
+    padding-right: 75px;
+    padding-left: 75px;
+    font-size: 15px;
+}
+
+.ScoresPage_link:hover {
+    color: #4681A6;
+}
+
+.Score_Delete {
+    margin-top: 15px;
+    width: 227px;
+    height: 30px;
+    color: #025918;
+    font-size: 15px;
+    background-color: white;
+    border: 1px #4681A6 solid;
+    margin-bottom: 13px;
+    font-family: 'Merriweather', serif
+}
+
+.score_dates-modified {
+    margin-bottom: 10px;
+}

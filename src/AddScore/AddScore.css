@@ -1,0 +1,82 @@
+.AddScorePage_heading {
+    color: #025918;
+    font-size: 20px;
+}
+
+.AddScorePage {
+    color: black;
+    border: 1px solid #4681A6;
+    margin: 10px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.AddScore_form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.AddScorePage_form {
+    margin-bottom: 10px;
+}
+
+.AddScore_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.AddScore_commands {
+    width: 100px;
+    height: 30px;
+    color: #025918;
+    font-size: 15px;
+    background-color: white;
+    border: 1px #4681A6 solid;
+    font-family: 'Merriweather', serif;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .AddScorePage {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+    .AddScore_form {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-between;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+    .AddScorePage_form {
+        display: block;
+        margin-bottom: 25px;
+        width: 250px;
+    }
+    .AddScore_commands {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) {
+    .AddScorePage {
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    .AddScore_form {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+    .AddScorePage_form {
+        display: block;
+        margin-bottom: 25px;
+        width: 175px;
+    }
+    .AddScore_commands {
+        margin-left: 250px;
+    }
+}

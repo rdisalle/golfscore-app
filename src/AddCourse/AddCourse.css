@@ -1,0 +1,78 @@
+.AddCoursePage__heading {
+    color: #025918;
+    font-size: 20px;
+}
+
+.AddCoursePage {
+    color: black;
+    border: 1px solid #4681A6;
+    margin: 10px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.AddCourseForm {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.AddCoursePage_form {
+    margin-bottom: 10px;
+}
+
+.AddCourse_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.AddCourse_commands {
+    width: 100px;
+    height: 30px;
+    color: #025918;
+    font-size: 15px;
+    background-color: white;
+    border: 1px #4681A6 solid;
+    font-family: 'Merriweather', serif;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .AddCoursePage {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .AddCourseForm {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+    .AddCoursePage_form {
+        display: block;
+        margin-bottom: 25px;
+    }
+    .AddCourse_commands {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) {
+    .AddCoursePage {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .AddCourseForm {
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+    .AddCoursePage_form {
+        display: block;
+        margin-bottom: 25px;
+    }
+    .AddCourse_commands {
+        margin-left: 250px;
+    }
+}

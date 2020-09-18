@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import config from '../config'
 
 const Required = () => (
-    <span className='EditCourse_required'>*</span>
+    <span className="EditCourse_required">*</span>
 )
 
 class EditCourse extends Component {
@@ -273,22 +273,23 @@ class EditCourse extends Component {
     return (
       <div className="EditCoursePage">
         <div className="EditCoursePage__heading">
-          <h1>Edit Course!</h1>
+          <h1>Edit Course</h1>
         </div>
         <form 
             className="EditCourse_form"
             onSubmit={this.handleSubmit}
         >
-            <div className='EditCourse__error' role='alert'>
+            <div className="EditCourse_error" role='alert'>
             {error && <p>{error.message}</p>}
             </div>
-            <div>
-                <label>
+            <div className="EditCourse_courseName">
+                <label className="EditCourse_label">
                     Course Name:
                     {' '}
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_name"
                     id="course_name"
@@ -298,13 +299,14 @@ class EditCourse extends Component {
                     onChange={this.handleChangeName} 
                 />
             </div>
-            <div>
+            <div className="EditCourse_courseLocation">
                 <label>
                     Course Location (City, State):
                     {' '}
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_location"
                     id="course_location"
@@ -321,6 +323,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_distance"
                     id="course_distance"
@@ -337,6 +340,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par"
                     id="course_par"
@@ -353,6 +357,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_one"
                     id="course_par_hole_one"
@@ -369,6 +374,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_two"
                     id="course_par_hole_two"
@@ -385,6 +391,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_three"
                     id="course_par_hole_three"
@@ -401,6 +408,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_four"
                     id="course_par_hole_four"
@@ -417,6 +425,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_five"
                     id="course_par_hole_five"
@@ -433,6 +442,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_six"
                     id="course_par_hole_six"
@@ -449,6 +459,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_seven"
                     id="course_par_hole_seven"
@@ -460,11 +471,12 @@ class EditCourse extends Component {
             </div>
             <div>
                 <label>
-                    Hole Eigbt Par:
+                    Hole Eight Par:
                     {' '}
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_eight"
                     id="course_par_hole_eight"
@@ -481,6 +493,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_nine"
                     id="course_par_hole_nine"
@@ -497,6 +510,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_ten"
                     id="course_par_hole_ten"
@@ -513,6 +527,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_eleven"
                     id="course_par_hole_eleven"
@@ -529,6 +544,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_twelve"
                     id="course_par_hole_twelve"
@@ -545,6 +561,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_thirteen"
                     id="course_par_hole_thirteen"
@@ -561,6 +578,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_fourteen"
                     id="course_par_hole_fourteen"
@@ -577,6 +595,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_fifteen"
                     id="course_par_hole_fifteenr"
@@ -593,6 +612,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_sixteen"
                     id="course_par_hole_sixteen"
@@ -609,6 +629,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_seventeen"
                     id="course_par_hole_seventeen"
@@ -625,6 +646,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_par_hole_eighteen"
                     id="course_par_hole_eighteen"
@@ -640,11 +662,12 @@ class EditCourse extends Component {
                     {' '}
                     <Required />
                 </label>
-                <input 
+                <textarea 
+                    className="EditCoursePage_formSummary"
                     type="text" 
                     name="course_summary"
                     id="course_summary"
-                    placeholder="This info about my course!"
+                    placeholder="This is info about my course!"
                     required
                     value={course_summary}
                     onChange={this.handleChangeCourse_summary} 
@@ -657,6 +680,7 @@ class EditCourse extends Component {
                     <Required />
                 </label>
                 <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_url"
                     id="course_url"
@@ -666,12 +690,11 @@ class EditCourse extends Component {
                     onChange={this.handleChangeCourse_url} 
                 />
             </div>
-            <div className='EditCourse__buttons'>
-            <button type='button' onClick={this.handleClickCancel}>
+            <div className="EditCourse_buttons">
+            <button className="EditCourse_commandsCancel" type='button' onClick={this.handleClickCancel}>
               Cancel
             </button>
-            {' '}
-            <button type='submit'>
+            <button className="EditCourse_commands" type='submit'>
               Save
             </button>
           </div>

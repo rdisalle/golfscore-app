@@ -9,7 +9,6 @@ import format from 'date-fns/format'
 class ScoresPage extends Component {
     static defaultProps = {
         name: '',
-        course:'',
         score_hole_one: '',
         score_hole_two: '',
         score_hole_three: '',
@@ -50,6 +49,7 @@ class ScoresPage extends Component {
             return 
           })
           .then(() => {
+              this.props.delete()
             this.context.deleteScore(scoreId)
           })
           .catch(error => {
@@ -64,71 +64,95 @@ class ScoresPage extends Component {
     return (
       <div className="ScoreItem">
         <div className="ScoreInfo">
-          {' '}
+        <ul className="ScoresPage_list">
+          <li className="ScoresPage_name">
           {name}
-          {' '}
-          1: {score_hole_one}
-          {' '}
-          2: {score_hole_two}
-          {' '}
-          3: {score_hole_three} 
-          {' '}
-          4: {score_hole_four}
-          {' '} 
-          5: {score_hole_five}
-          {' '} 
-          6: {score_hole_six}
-          {' '}
-          7: {score_hole_seven}
-          {' '}
-          8: {score_hole_eight}
-          {' '}
-          9: {score_hole_nine}
-          {' '} 
-          10: {score_hole_ten}
-          {' '} 
-          11: {score_hole_eleven}
-          {' '} 
-          12: {score_hole_twelve} 
-          {' '}
-          13: {score_hole_thirteen}
-          {' '} 
-          14: {score_hole_fourteen}
-          {' '} 
-          15: {score_hole_fifteen}
-          {' '} 
-          16: {score_hole_sixteen}
-          {' '}
-          17: {score_hole_seventeen}
-          {' '} 
-          18: {score_hole_eighteen}
-          {' '} 
-          Total: {total_score}
-          {' '} 
+          </li>
+          <li className="ScorePage_hole">
+          1) {' '} {score_hole_one}
+          </li>
+          <li className="ScorePage_hole">
+          2) {' '} {score_hole_two}
+          </li>
+          <li className="ScorePage_hole">
+          3) {' '} {score_hole_three} 
+          </li>
+          <li className="ScorePage_hole">
+          4) {' '} {score_hole_four}
+          </li>
+          <li className="ScorePage_hole">
+          5) {' '} {score_hole_five}
+          </li>
+          <li className="ScorePage_hole">
+          6) {' '} {score_hole_six}
+          </li>
+          <li className="ScorePage_hole">
+          7) {' '} {score_hole_seven}
+          </li>
+          <li className="ScorePage_hole">
+          8) {' '} {score_hole_eight}
+          </li>
+          <li className="ScorePage_hole">
+          9) {' '} {score_hole_nine}
+          </li>
+          <li className="ScorePage_hole">
+          10) {' '} {score_hole_ten}
+          </li>
+          <li className="ScorePage_hole">
+          11) {' '} {score_hole_eleven}
+          </li>
+          <li className="ScorePage_hole">
+          12) {' '} {score_hole_twelve} 
+          </li>
+          <li className="ScorePage_hole">
+          13) {' '} {score_hole_thirteen}
+          </li>
+          <li className="ScorePage_hole">
+          14) {' '} {score_hole_fourteen}
+          </li>
+          <li className="ScorePage_hole"> 
+          15) {' '} {score_hole_fifteen}
+          </li>
+          <li className="ScorePage_hole"> 
+          16) {' '} {score_hole_sixteen}
+          </li>
+          <li className="ScorePage_hole">
+          17) {' '} {score_hole_seventeen}
+          </li>
+          <li className="ScorePage_hole">
+          18) {' '} {score_hole_eighteen}
+          </li>
+          <li className="ScoresPage_total">
+          Total: {' '} {total_score}
+          </li>
+          <li className="ScoresPage_toPar">
           {to_par}
-          {' '}
-          <div className='score__dates'>
-          <div className='score__dates-modified'>
+          </li>
+          <li>
+          <div className="score_dates">
+          <div className="score_dates-modified">
             Created:
             {' '}
-            <span className='Date'>
+            <span className="Date">
             {format(new Date(date_modified), "LLLL do yyyy")}
             </span>
           </div>
+          </div>
+          </li>
+        </ul>
         </div>
-        </div>
-        <div className="ScoresItem_commands">
-            <Link to={`/edit-score-page/${id}`}>
+        <div className="ScoresPage_command">
+            <Link className="ScoresPage_link" to={`/edit-score-page/${id}`}>
                 Edit Score
             </Link>
-            <button
-            className='Course_Delete'
+        </div>
+        <button
+            className="Score_Delete"
             type='button'
             onClick={this.handleClickDelete}
-            >
+            > 
             Delete
           </button>
-        </div>
       </div>
     );
     }
@@ -138,7 +162,6 @@ ScoresPage.propTypes = {
     id: PropTypes.number,
     onDeleteNote: PropTypes.func,
     name: PropTypes.string.isRequired,
-    course: PropTypes.string.isRequired,
     score_hole_one: PropTypes.string.isRequired,
     score_hole_two: PropTypes.string.isRequired,
     score_hole_three: PropTypes.string.isRequired,

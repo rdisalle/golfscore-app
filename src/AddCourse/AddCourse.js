@@ -211,17 +211,19 @@ class AddCourse extends Component {
     return (
       <div className="AddCoursePage">
         <div className="AddCoursePage__heading">
-          <h1>Add Course!</h1>
+          <h1>Add Course</h1>
         </div>
         <form 
             className="AddCourseForm"
             onSubmit={e => this.handleFormSubmit(e)}
         >
+          <div>
             <label htmlFor="name">
                 Name:
                 {this.context.newCourse.name.touched && <p>{this.validateName()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="name"
                 id="name"
@@ -231,11 +233,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.name, e.target.value)
                 }
             />
-            <label htmlFor="location">
+          </div>
+          <div>
+            <label  htmlFor="location">
                 Location:
                 {this.context.newCourse.location.touched && <p>{this.validateLocation()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="location"
                 id="location"
@@ -245,11 +250,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.location, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_distance">
                 Course Distance:
                 {this.context.newCourse.course_distance.touched && <p>{this.validateCourse_distance()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_distance"
                 id="course_distance"
@@ -259,11 +267,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_distance, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par">
                 Course Par:
                 {this.context.newCourse.course_par.touched && <p>{this.validateCourse_par()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par"
                 id="course_par"
@@ -273,11 +284,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_one">
                 Hole One Par:
                 {this.context.newCourse.course_par_hole_one.touched && <p>{this.validateCourse_par_hole_one()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_one"
                 id="course_par_hole_one"
@@ -287,11 +301,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_one, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_two">
                 Hole Two Par:
                 {this.context.newCourse.course_par_hole_two.touched && <p>{this.validateCourse_par_hole_two()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_two"
                 id="course_par_hole_two"
@@ -301,11 +318,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_two, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_three">
                 Hole Three Par:
                 {this.context.newCourse.course_par_hole_three.touched && <p>{this.validateCourse_par_hole_three()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_three"
                 id="course_par_hole_three"
@@ -315,11 +335,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_three, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_four">
                 Hole Four Par:
                 {this.context.newCourse.course_par_hole_four.touched && <p>{this.validateCourse_par_hole_four()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_four"
                 id="course_par_hole_four"
@@ -329,11 +352,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_four, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_five">
                 Hole Five Par:
                 {this.context.newCourse.course_par_hole_five.touched && <p>{this.validateCourse_par_hole_five()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_five"
                 id="course_par_hole_five"
@@ -343,11 +369,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_five, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_six">
                 Hole Six Par:
                 {this.context.newCourse.course_par_hole_six.touched && <p>{this.validateCourse_par_hole_six()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_six"
                 id="course_par_hole_six"
@@ -357,11 +386,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_six, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_seven">
                 Hole Seven Par:
                 {this.context.newCourse.course_par_hole_seven.touched && <p>{this.validateCourse_par_hole_seven()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_seven"
                 id="course_par_hole_seven"
@@ -371,11 +403,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_seven, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_eight">
                 Hole Eight Par:
                 {this.context.newCourse.course_par_hole_eight.touched && <p>{this.validateCourse_par_hole_eight()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_eight"
                 id="course_par_hole_eight"
@@ -385,11 +420,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_eight, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_nine">
                 Hole Nine Par:
                 {this.context.newCourse.course_par_hole_nine.touched && <p>{this.validateCourse_par_hole_nine()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_nine"
                 id="course_par_hole_nine"
@@ -399,11 +437,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_nine, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_ten">
                 Hole Ten Par:
                 {this.context.newCourse.course_par_hole_ten.touched && <p>{this.validateCourse_par_hole_ten()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_ten"
                 id="course_par_hole_ten"
@@ -413,11 +454,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_ten, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_eleven">
                 Hole Eleven Par:
                 {this.context.newCourse.course_par_hole_eleven.touched && <p>{this.validateCourse_par_hole_eleven()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_eleven"
                 id="course_par_hole_eleven"
@@ -427,11 +471,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_eleven, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_twelve">
                 Hole Twelve Par:
                 {this.context.newCourse.course_par_hole_twelve.touched && <p>{this.validateCourse_par_hole_twelve()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_twelve"
                 id="course_par_hole_twelve"
@@ -441,11 +488,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_twelve, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_thirteen">
                 Hole Thirteen Par:
                 {this.context.newCourse.course_par_hole_thirteen.touched && <p>{this.validateCourse_par_hole_thirteen()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_thirteen"
                 id="course_par_hole_thirteen"
@@ -455,11 +505,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_thirteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_fourteen">
                 Hole Fourteen Par:
                 {this.context.newCourse.course_par_hole_fourteen.touched && <p>{this.validateCourse_par_hole_fourteen()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_fourteen"
                 id="course_par_hole_fourteen"
@@ -469,11 +522,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_fourteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_fifteen">
                 Hole Fifteen Par:
                 {this.context.newCourse.course_par_hole_fifteen.touched && <p>{this.validateCourse_par_hole_fifteen()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_fifteen"
                 id="course_par_hole_fifteen"
@@ -483,11 +539,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_fifteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_sixteen">
                 Hole Sixteen Par:
                 {this.context.newCourse.course_par_hole_sixteen.touched && <p>{this.validateCourse_par_hole_sixteen()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_sixteen"
                 id="course_par_hole_sixteen"
@@ -497,11 +556,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_sixteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_seventeen">
                 Hole Seventeen Par:
                 {this.context.newCourse.course_par_hole_seventeen.touched && <p>{this.validateCourse_par_hole_seventeen()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_seventeen"
                 id="course_par_hole_seventeen"
@@ -511,11 +573,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_seventeen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_par_hole_eighteen">
                 Hole Eighteen Par:
                 {this.context.newCourse.course_par_hole_eighteen.touched && <p>{this.validateCourse_par_hole_eighteen()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_par_hole_eighteen"
                 id="course_par_hole_eighteen"
@@ -525,11 +590,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_par_hole_eighteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_summary">
                 Course Summary:
                 {this.context.newCourse.course_summary.touched && <p>{this.validateCourse_summary()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_summary"
                 id="course_summary"
@@ -539,11 +607,14 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_summary, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="course_url">
                 Course Website:
                 {this.context.newCourse.course_url.touched && <p>{this.validateCourse_url()}</p>}
             </label>
             <input
+                className="AddCoursePage_form"
                 type="text"
                 name="course_url"
                 id="course_url"
@@ -553,15 +624,15 @@ class AddCourse extends Component {
                     this.context.updateNewCourseData(e.target.course_url, e.target.value)
                 }
             />
-        <div className='AddCourse__buttons'>
-            <button type='button' onClick={this.handleClickCancel}>
-              Cancel
-            </button>
-            {' '}
-            <button type='submit'>
-              Add
-            </button>
-          </div>
+            </div>
+            <div className="AddCourse_buttons">
+                <button className="AddCourse_commands" type='button' onClick={this.handleClickCancel}>
+                    Cancel
+                </button>
+                <button className="AddCourse_commands" type='submit'>
+                    Add
+                </button>
+            </div>
         </form>
         </div>
     );

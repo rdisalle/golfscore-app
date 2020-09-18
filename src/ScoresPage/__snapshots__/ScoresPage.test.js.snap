@@ -1,73 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScoresPage component renders a .ScoresPage by default 1`] = `
-<div
-  className="ScoreItem"
->
-  <div
-    className="ScoreInfo"
-  >
-     
-     
-    1: 
-     
-    2: 
-     
-    3: 
-     
-    4: 
-     
-    5: 
-     
-    6: 
-     
-    7: 
-     
-    8: 
-     
-    9: 
-     
-    10: 
-     
-    11: 
-     
-    12: 
-     
-    13: 
-     
-    14: 
-     
-    15: 
-     
-    16: 
-     
-    17: 
-     
-    18: 
-     
-    Total: 
-     
-     
-  </div>
-  <div
-    className="ScoresItem_commands"
-  >
-    <Link
-      to="/edit-score-page/undefined"
-    >
-      Edit Score
-    </Link>
-    <button
-      className="Course_Delete"
-      onClick={[Function]}
-      type="button"
-    >
-      Delete
-    </button>
-  </div>
-</div>
-`;
-
 exports[`ScoresPage component renders the ScoresPage given props 1`] = `
 <div
   className="ScoreItem"
@@ -117,6 +49,21 @@ exports[`ScoresPage component renders the ScoresPage given props 1`] = `
     Total: 
      
      
+    <div
+      className="score__dates"
+    >
+      <div
+        className="score__dates-modified"
+      >
+        Created:
+         
+        <span
+          className="Date"
+        >
+          January 22nd 2020
+        </span>
+      </div>
+    </div>
   </div>
   <div
     className="ScoresItem_commands"
@@ -127,7 +74,7 @@ exports[`ScoresPage component renders the ScoresPage given props 1`] = `
       Edit Score
     </Link>
     <button
-      className="Course_Delete"
+      className="Score_Delete"
       onClick={[Function]}
       type="button"
     >

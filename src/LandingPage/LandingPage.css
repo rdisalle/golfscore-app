@@ -1,0 +1,53 @@
+.LandingPage {
+    border: 1px solid #4681A6;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    color: #025918;
+}
+
+.Landing_Link {
+    color: #4681A6;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.Landing_Link:hover {
+    color: #025918;
+}
+
+.Landing_list {
+    list-style-type: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 10px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 16px;
+    color: black;
+}
+
+.LandingList_item {
+    padding-bottom: 15px;
+}
+
+@media only screen and (min-device-width: 768px) {
+    .LandingPage {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .Landing_list {
+        padding-left: 25px;
+    }
+}
+
+@media screen and (min-device-width: 1200px) {
+    .LandingPage {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+    .Landing_list {
+        padding-left: 50px;
+    }
+}

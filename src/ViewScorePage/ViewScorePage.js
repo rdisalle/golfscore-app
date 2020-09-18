@@ -14,7 +14,10 @@ class ViewScorePage extends Component {
     static contextType = GolfContext;
 
     onDelete = () => {
-        this.props.history.push('/all-scores/:courseId')
+        const { scores } = this.context
+        const { scoreId } = this.props.match.params
+        const score = this.findScore(scores, scoreId) || { content: '' }
+        this.props.history.push(`/all-scores/${score.course_id}`)
       }
 
     findScore = (scores=[], scoreId) =>
@@ -27,9 +30,6 @@ class ViewScorePage extends Component {
 
     return (
         <section className="ViewScorePage">
-            <h2 className="CourseName">
-                {score.course}
-            </h2>
             <ScoresPage
                 id={score.id}
                 name={score.name}
@@ -53,8 +53,8 @@ class ViewScorePage extends Component {
                 score_hole_eighteen={score.score_hole_eighteen}
                 total_score={score.total_score}
                 to_par={score.to_par} 
-                delete= {this.onDelete}
                 date_modified={score.date_modified}
+                delete= {this.onDelete}
             />
         </section>
     );

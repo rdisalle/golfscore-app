@@ -7,12 +7,8 @@ describe(`ScoresPage component`, () => {
   const props = {
     id: 1,
     name: 'test-class-name',
+    date_modified: new Date('2020-01-22T16:28:32.615Z'),
   }
-
-  it('renders a .ScoresPage by default', () => {
-    const wrapper = shallow(<ScoresPage />)
-    expect(toJson(wrapper)).toMatchSnapshot()
-  })
 
   it('renders the ScoresPage given props', () => {
     const wrapper = shallow(<ScoresPage {...props} />)

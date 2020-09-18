@@ -92,6 +92,7 @@ exports[`CoursePage component renders a .CoursePage by default 1`] = `
      
      
      
+     
   </div>
   <div
     className="CourseItem_commands"
@@ -213,6 +214,7 @@ exports[`CoursePage component renders the CoursePage given props 1`] = `
      
      
     18: 
+     
      
      
      

@@ -52,6 +52,7 @@ class CoursePage extends Component {
         })
         .then(() => {
           this.context.deleteCourse(courseId)
+          this.props.delete()
         })
         .catch(error => {
           console.error({ error })
@@ -66,80 +67,106 @@ class CoursePage extends Component {
       course_par_hole_fifteen, course_par_hole_sixteen, course_par_hole_seventeen, course_par_hole_eighteen,
       course_summary, course_url } = this.props
     return (
-      <div className="CourseItem">
-        <Link to={`/course-page/${id}`}> 
-          {name}
-        </Link>
+      <div className="CoursePage_item">
         <div className="courseInfo">
-          {name}
-          {' '}
-          {location}
-          {' '}
-          {course_distance}
-          {' '}
-          Par: {' '} {course_par}
-          {' '}
-          Hole:
-          {' '}
-          1: {' '} {course_par_hole_one}
-          {' '}
-          2: {' '} {course_par_hole_two}
-          {' '}
-          3: {' '} {course_par_hole_three}
-          {' '}
-          4: {' '} {course_par_hole_four}
-          {' '}
-          5: {' '} {course_par_hole_five}
-          {' '}
-          6: {' '} {course_par_hole_six}
-          {' '}
-          7: {' '} {course_par_hole_seven}
-          {' '}
-          8: {' '} {course_par_hole_eight}
-          {' '}
-          9: {' '} {course_par_hole_nine}
-          {' '}
-          10: {' '} {course_par_hole_ten}
-          {' '}
-          11: {' '} {course_par_hole_eleven}
-          {' '}
-          12: {' '} {course_par_hole_twelve}
-          {' '}
-          13: {' '} {course_par_hole_thirteen}
-          {' '}
-          14: {' '} {course_par_hole_fourteen}
-          {' '}
-          15: {' '} {course_par_hole_fifteen}
-          {' '}
-          16: {' '} {course_par_hole_sixteen}
-          {' '}
-          17: {' '} {course_par_hole_seventeen}
-          {' '}
-          18: {' '} {course_par_hole_eighteen}
-          {' '}
-          {course_summary}
-          {' '}
-          {course_url}
-          {' '}
+          <ul className="CourseInfo_list">
+            <li className="CoursePage_name">
+            {name}
+            </li>
+            <li className="CoursePage_location">
+            {location}
+            </li>
+            <li className="CoursePage_distance">
+            {course_distance}
+            </li>
+            <li>
+            Par: {' '} {course_par}
+            </li>
+            <li className="CoursePage_holeLabel">
+            Hole:
+            </li>
+            <li className="CoursePage_hole">
+            1) {' '} {course_par_hole_one}
+            </li>
+            <li className="CoursePage_hole">
+            2) {' '} {course_par_hole_two}
+            </li>
+            <li className="CoursePage_hole">
+            3) {' '} {course_par_hole_three}
+            </li>
+            <li className="CoursePage_hole">
+            4) {' '} {course_par_hole_four}
+            </li>
+            <li className="CoursePage_hole">
+            5) {' '} {course_par_hole_five}
+            </li>
+            <li className="CoursePage_hole">
+            6) {' '} {course_par_hole_six}
+            </li>
+            <li className="CoursePage_hole">
+            7) {' '} {course_par_hole_seven}
+            </li>
+            <li className="CoursePage_hole">
+            8) {' '} {course_par_hole_eight}
+            </li>
+            <li className="CoursePage_hole">
+            9) {' '} {course_par_hole_nine}
+            </li>
+            <li className="CoursePage_hole">
+            10) {' '} {course_par_hole_ten}
+            </li>
+            <li className="CoursePage_hole">
+            11) {' '} {course_par_hole_eleven}
+            </li>
+            <li className="CoursePage_hole">
+            12) {' '} {course_par_hole_twelve}
+            </li>
+            <li className="CoursePage_hole">
+            13) {' '} {course_par_hole_thirteen}
+            </li>
+            <li className="CoursePage_hole">
+            14) {' '} {course_par_hole_fourteen}
+            </li>
+            <li className="CoursePage_hole">
+            15) {' '} {course_par_hole_fifteen}
+            </li>
+            <li className="CoursePage_hole">
+            16) {' '} {course_par_hole_sixteen}
+            </li>
+            <li className="CoursePage_hole">
+            17) {' '} {course_par_hole_seventeen}
+            </li>
+            <li className="CoursePage_hole">
+            18) {' '} {course_par_hole_eighteen}
+            </li>
+            <li className="CoursePage_summary">
+            {course_summary}
+            </li>
+            <li>
+            <a className="CoursePage_url" href={course_url} target="_blank" rel="noopener noreferrer">
+            {course_url}
+            </a>
+            </li>
+            </ul>
         </div>
         <div className="CourseItem_commands">
-          <Link to={`/edit-course-page/${id}`}>
+          <Link className="CourseItem_Link" to={`/edit-course-page/${id}`}>
                 Edit Course
           </Link>
-          <button
-            className='Course_Delete'
+          <Link className="CourseItem_Link" to={`/add-score-page/${id}`}>
+                Add Score
+          </Link>
+          <Link className="CourseItem_Link" to={`/all-scores/${id}`}>
+                View Scores
+          </Link>
+        </div>
+        <button
+            className="Course_Delete"
             type='button'
             onClick={this.handleClickDelete}
           >
             Delete
           </button>
-          <Link to={`/add-score-page/${id}`}>
-                Add Score
-          </Link>
-          <Link to={`/all-scores/${id}`}>
-                View Scores
-          </Link>
-        </div>
       </div>
     );
   }

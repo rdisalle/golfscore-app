@@ -8,7 +8,6 @@ describe(`ViewScorePage component`, () => {
     score: {
         "id": "cbc787a0-ffaf-11e8-8eb2-f2801f1b9fd1",
         "name": "Golf Course Score One",
-        "course": "Golf Course",
         "score_hole_one": "3", 
         "score_hole_two": "4", 
         "score_hole_three": "5",

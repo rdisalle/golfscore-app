@@ -16,7 +16,8 @@ class AllScores extends Component {
     static contextType = GolfContext;
 
     onDelete = () => {
-        this.props.history.push('/all-scores/:courseId')
+        const { courseId } = this.props.match.params
+        this.props.history.push(`/all-scores/${courseId}`)
       }
     
     getScoresForCourse = (scores=[], courseId) => (
@@ -36,29 +37,47 @@ class AllScores extends Component {
         const course = this.findCourse(courses, courseId) || { content: '' }
         return (
             <div className="AllScores"> 
-                <h2>
+                <h2 className="AllScores_course">
                     {course.name}
                 </h2>
-                <ul className="AllScores_list">
+                <Link className="AllScores_add" to={`/add-score-page/${courseId}`}>
+                    Add Score
+                </Link>
+                <ul className="AllScores_list">  
                     {scoresForCourse.map(score =>
-                    <li key={score.id}>
+                    <li className="AllScores_score" key={score.id}>
                         <ScoresPage
                             id={score.id}
                             name={score.name}
+                            score_hole_one={score.score_hole_one}
+                            score_hole_two={score.score_hole_two}
+                            score_hole_three={score.score_hole_three}
+                            score_hole_four={score.score_hole_four}
+                            score_hole_five={score.score_hole_five}
+                            score_hole_six={score.score_hole_six}
+                            score_hole_seven={score.score_hole_seven}
+                            score_hole_eight={score.score_hole_eight}
+                            score_hole_nine={score.score_hole_nine}
+                            score_hole_ten={score.score_hole_ten}
+                            score_hole_eleven={score.score_hole_eleven}
+                            score_hole_twelve={score.score_hole_twelve}
+                            score_hole_thirteen={score.score_hole_thirteen}
+                            score_hole_fourteen={score.score_hole_fourteen}
+                            score_hole_fifteen={score.score_hole_fifteen}
+                            score_hole_sixteen={score.score_hole_sixteen}
+                            score_hole_seventeen={score.score_hole_seventeen}
+                            score_hole_eighteen={score.score_hole_eighteen}
                             total_score={score.total_score}
                             to_par={score.to_par}
                             date_modified={score.date_modified}
                             delete= {this.onDelete}
                         />
-                        <Link to={`/course-score/${score.id}`}>
+                        <Link className="AllScores_viewLink" to={`/course-score/${score.id}`}>
                             View 
                         </Link>
                     </li>
                     )}
                 </ul>
-                <Link to={`/add-score-page/${courseId}`}>
-                    Add Score
-                </Link>
             </div>
         );
     }

@@ -41,14 +41,12 @@ class AddScore extends Component {
           </option>
         ))
       }
-
     
     handleFormSubmit = e => {
         const { courseId } = this.props.match.params
         e.preventDefault(e)
         const newScore = {
             name: e.target.name.value,
-            course: e.target.course.value,
             course_id: e.target.course_id.value,
             score_hole_one: e.target.score_hole_one.value,
             score_hole_two: e.target.score_hole_two.value,
@@ -209,18 +207,20 @@ class AddScore extends Component {
   render() {
     return (
       <div className="AddScorePage">
-        <div className="AddScorePage__heading">
-          <h1>Add Score!</h1>
+        <div className="AddScorePage_heading">
+          <h1>Add Score</h1>
         </div>
         <form 
             className="AddScore_form"
             onSubmit={e => this.handleFormSubmit(e)}
         >
+            <div>
             <label htmlFor="name">
                 Score Name:
                 {this.context.newScore.name.touched && <p>{this.validateName()}</p>}
             </label>
             <input 
+                className="AddScorePage_form"
                 type="text" 
                 name="name"
                 id="name"
@@ -230,10 +230,13 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.name, e.target.value)
                 } 
             />
+            </div>
+            <div>
             <label htmlFor="course">
-                Select Course Name:
+                Select Course:
             </label>
             <select 
+                className="AddScorePage_form"
                 name="course_id"
                 id="course_id"
                 required={true}
@@ -244,11 +247,14 @@ class AddScore extends Component {
             >
             {this.parseCourses()}
             </select>
+            </div>
+            <div>
             <label htmlFor="score_hole_one">
                 Hole One Score:
                 {this.context.newScore.score_hole_one.touched && <p>{this.validateScore_hole_one()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_one"
                 id="score_hole_one"
@@ -258,11 +264,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_one, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_two">
                 Hole Two Score:
                 {this.context.newScore.score_hole_two.touched && <p>{this.validateScore_hole_two()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_two"
                 id="score_hole_two"
@@ -272,11 +281,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_two, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_three">
                 Hole Three Score:
                 {this.context.newScore.score_hole_three.touched && <p>{this.validateScore_hole_three()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_three"
                 id="score_hole_three"
@@ -286,11 +298,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_three, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_four">
                 Hole Four Score:
                 {this.context.newScore.score_hole_four.touched && <p>{this.validateScore_hole_four()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_four"
                 id="score_hole_four"
@@ -300,11 +315,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_four, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_five">
                 Hole Five Score:
                 {this.context.newScore.score_hole_five.touched && <p>{this.validateScore_hole_five()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_five"
                 id="score_hole_five"
@@ -314,11 +332,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_five, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_six">
                 Hole Six Score:
                 {this.context.newScore.score_hole_six.touched && <p>{this.validateScore_hole_six()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_six"
                 id="score_hole_six"
@@ -328,11 +349,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_six, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_seven">
                 Hole Seven Score:
                 {this.context.newScore.score_hole_seven.touched && <p>{this.validateScore_hole_seven()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_seven"
                 id="score_hole_seven"
@@ -342,11 +366,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_seven, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_eight">
                 Hole Eight Score:
                 {this.context.newScore.score_hole_eight.touched && <p>{this.validateScore_hole_eight()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_eight"
                 id="score_hole_eight"
@@ -356,11 +383,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_eight, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_nine">
                 Hole Nine Score:
                 {this.context.newScore.score_hole_nine.touched && <p>{this.validateScore_hole_nine()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_nine"
                 id="score_hole_nine"
@@ -370,11 +400,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_nine, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_ten">
                 Hole Ten Score:
                 {this.context.newScore.score_hole_ten.touched && <p>{this.validateScore_hole_ten()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_ten"
                 id="score_hole_ten"
@@ -384,11 +417,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_ten, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_Eleven">
                 Hole Eleven Score:
                 {this.context.newScore.score_hole_eleven.touched && <p>{this.validateScore_hole_eleven()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_eleven"
                 id="score_hole_eleven"
@@ -398,11 +434,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_eleven, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_twelve">
                 Hole Twelve Score:
                 {this.context.newScore.score_hole_twelve.touched && <p>{this.validateScore_hole_twelve()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_twelve"
                 id="score_hole_twelve"
@@ -412,11 +451,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_twelve, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_thirteen">
                 Hole Thirteen Score:
                 {this.context.newScore.score_hole_thirteen.touched && <p>{this.validateScore_hole_thirteen()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_thirteen"
                 id="score_hole_thirteen"
@@ -426,11 +468,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_thirteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_fourteen">
                 Hole Fourteen Score:
                 {this.context.newScore.score_hole_fourteen.touched && <p>{this.validateScore_hole_fourteen()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_fourteen"
                 id="score_hole_fourteen"
@@ -440,11 +485,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_fourteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_fifteen">
                 Hole Fifteen Score:
                 {this.context.newScore.score_hole_fifteen.touched && <p>{this.validateScore_hole_fifteen()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_fifteen"
                 id="score_hole_fifteen"
@@ -454,11 +502,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_fifteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_sixteen">
                 Hole Sixteen Score:
                 {this.context.newScore.score_hole_sixteen.touched && <p>{this.validateScore_hole_sixteen()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_sixteen"
                 id="score_hole_sixteen"
@@ -468,11 +519,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_sixteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_seventeen">
                 Hole Seventeen Score:
                 {this.context.newScore.score_hole_seventeen.touched && <p>{this.validateScore_hole_seventeen()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_seventeen"
                 id="score_hole_seventeen"
@@ -482,11 +536,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_seventeen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="score_hole_eighteen">
                 Hole Eighteen Score:
                 {this.context.newScore.score_hole_eighteen.touched && <p>{this.validateScore_hole_eighteen()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="score_hole_eighteen"
                 id="score_hole_eighteen"
@@ -496,11 +553,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.score_hole_eighteen, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="total_score">
                 Total Score:
                 {this.context.newScore.total_score.touched && <p>{this.validateTotal_score()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="total_score"
                 id="total_score"
@@ -510,11 +570,14 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.total_score, e.target.value)
                 }
             />
+            </div>
+            <div>
             <label htmlFor="to_par">
                 To Par:
                 {this.context.newScore.to_par.touched && <p>{this.validateTo_par()}</p>}
             </label>
             <input
+                className="AddScorePage_form"
                 type="text"
                 name="to_par"
                 id="to_par"
@@ -524,12 +587,12 @@ class AddScore extends Component {
                     this.context.updateNewScoreData(e.target.to_score, e.target.value)
                 }
             />
-        <div className='AddCourse__buttons'>
-            <button type='button' onClick={this.handleClickCancel}>
+            </div>
+        <div className="AddScore_buttons">
+            <button className="AddScore_commands" type='button' onClick={this.handleClickCancel}>
               Cancel
             </button>
-            {' '}
-            <button type='submit'>
+            <button className="AddScore_commands" type='submit'>
               Add
             </button>
           </div>

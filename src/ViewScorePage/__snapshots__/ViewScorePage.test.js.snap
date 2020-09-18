@@ -8,7 +8,6 @@ exports[`ViewScorePage component renders a .ViewScorePage by default 1`] = `
     className="CourseName"
   />
   <ScoresPage
-    course=""
     delete={[Function]}
     name=""
     score_hole_eight=""

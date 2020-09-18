@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom'
 import './App.css';
 import NavBar from '../src/NavBar/NavBar'
 import LandingPage from '../src/LandingPage/LandingPage'
-import SignUpPage from '../src/SignUpPage/SignUpPage'
 import ViewCourseList from '../src/ViewCourseList/ViewCourseList'
 import CourseItem from '../src/CourseItem/CourseItem'
 import AllScores from '../src/AllScores/AllScores'
@@ -364,11 +363,10 @@ class App extends Component {
     }
   return (
     <GolfContext.Provider value={value}>
-      <main className='App'>
+      <main className="App">
         <NavBar />
-        <h1>GolfScore</h1>
+        <h1 className="AppHeader">GolfScore</h1>
         <Route exact path="/" component={LandingPage} />
-        <Route path="/sign-up-page" component={SignUpPage} />
         <Route path="/add-score-page/:courseId" component={AddScore} />
         <Route path="/add-course-page" component={AddCourse} />
         <Route path="/edit-course-page/:courseId" component={EditCourse} />

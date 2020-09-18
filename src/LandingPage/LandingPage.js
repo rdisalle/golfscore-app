@@ -5,14 +5,21 @@ import { Link } from 'react-router-dom';
 class LandingPage extends Component {
   render() {
     return (
-        <main className='LandingPage'>
+        <main className="LandingPage">
             <h1>Welcome to GolfScore</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum lorem a justo tempus vehicula. 
-            Suspendisse condimentum efficitur vestibulum. Curabitur dignissim non nisi vitae lobortis. Praesent iaculis vehicula arcu, 
-            elementum ornare enim tincidunt in.</p>
+            <h2>To Get Started: </h2>
+            <ul className="Landing_list">
+              <li className="LandingList_item">Simply click "View Courses" below</li>
+              <li className="LandingList_item">From there you will navigate to a course list page. On this page, press "Add Course" and fill in the information.</li>
+              <li className="LandingList_item">Once you have a course added, you will have the ability to add scores to the course.</li>
+              <li className="LandingList_item">To add a score, press "Add Score" and fill out the information.</li>
+              <li className="LandingList_item">Once done, you will be able to view that score under the course selected.</li>
+              <li className="LandingList_item">GolfScore will allow you to easily submit all courses played and the scores to go with them.</li>
+              <li className="LandingList_item">From here you will be able to easily compare your scores.</li>
+            </ul>
             <div>
-              <Link to={'/view-course-list'} >
-                  View Your Course List
+              <Link className="Landing_Link" to={'/view-course-list'} >
+                  View Courses
               </Link>
             </div>
          </main>
