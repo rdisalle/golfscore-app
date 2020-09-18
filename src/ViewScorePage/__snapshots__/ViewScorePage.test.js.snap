@@ -4,9 +4,6 @@ exports[`ViewScorePage component renders a .ViewScorePage by default 1`] = `
 <section
   className="ViewScorePage"
 >
-  <h2
-    className="CourseName"
-  />
   <ScoresPage
     delete={[Function]}
     name=""

@@ -7,79 +7,185 @@ exports[`ScoresPage component renders the ScoresPage given props 1`] = `
   <div
     className="ScoreInfo"
   >
-     
-    test-class-name
-     
-    1: 
-     
-    2: 
-     
-    3: 
-     
-    4: 
-     
-    5: 
-     
-    6: 
-     
-    7: 
-     
-    8: 
-     
-    9: 
-     
-    10: 
-     
-    11: 
-     
-    12: 
-     
-    13: 
-     
-    14: 
-     
-    15: 
-     
-    16: 
-     
-    17: 
-     
-    18: 
-     
-    Total: 
-     
-     
-    <div
-      className="score__dates"
+    <ul
+      className="ScoresPage_list"
     >
-      <div
-        className="score__dates-modified"
+      <li
+        className="ScoresPage_name"
       >
-        Created:
+        test-class-name
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        1) 
          
-        <span
-          className="Date"
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        2) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        3) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        4) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        5) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        6) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        7) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        8) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        9) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        10) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        11) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        12) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        13) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        14) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        15) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        16) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        17) 
+         
+         
+      </li>
+      <li
+        className="ScorePage_hole"
+      >
+        18) 
+         
+         
+      </li>
+      <li
+        className="ScoresPage_total"
+      >
+        Total: 
+         
+         
+      </li>
+      <li
+        className="ScoresPage_toPar"
+      />
+      <li>
+        <div
+          className="score_dates"
         >
-          January 22nd 2020
-        </span>
-      </div>
-    </div>
+          <div
+            className="score_dates-modified"
+          >
+            Created:
+             
+            <span
+              className="Date"
+            >
+              January 22nd 2020
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
   <div
-    className="ScoresItem_commands"
+    className="ScoresPage_command"
   >
     <Link
+      className="ScoresPage_link"
       to="/edit-score-page/1"
     >
       Edit Score
     </Link>
-    <button
-      className="Score_Delete"
-      onClick={[Function]}
-      type="button"
-    >
-      Delete
-    </button>
   </div>
+  <button
+    className="Score_Delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
 </div>
 `;

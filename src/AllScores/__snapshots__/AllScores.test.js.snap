@@ -4,15 +4,18 @@ exports[`AllScores component renders a .AllScores by default 1`] = `
 <div
   className="AllScores"
 >
-  <h2 />
-  <ul
-    className="AllScores_list"
+  <h2
+    className="AllScores_course"
   />
   <Link
+    className="AllScores_add"
     to="/add-score-page/undefined"
   >
     Add Score
   </Link>
+  <ul
+    className="AllScores_list"
+  />
 </div>
 `;
 

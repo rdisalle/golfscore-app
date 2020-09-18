@@ -2,249 +2,402 @@
 
 exports[`CoursePage component renders a .CoursePage by default 1`] = `
 <div
-  className="CourseItem"
+  className="CoursePage_item"
 >
-  <Link
-    to="/course-page/undefined"
-  />
   <div
     className="courseInfo"
   >
-     
-     
-     
-    Par: 
-     
-     
-     
-    Hole:
-     
-    1: 
-     
-     
-     
-    2: 
-     
-     
-     
-    3: 
-     
-     
-     
-    4: 
-     
-     
-     
-    5: 
-     
-     
-     
-    6: 
-     
-     
-     
-    7: 
-     
-     
-     
-    8: 
-     
-     
-     
-    9: 
-     
-     
-     
-    10: 
-     
-     
-     
-    11: 
-     
-     
-     
-    12: 
-     
-     
-     
-    13: 
-     
-     
-     
-    14: 
-     
-     
-     
-    15: 
-     
-     
-     
-    16: 
-     
-     
-     
-    17: 
-     
-     
-     
-    18: 
-     
-     
-     
-     
-     
+    <ul
+      className="CourseInfo_list"
+    >
+      <li
+        className="CoursePage_name"
+      />
+      <li
+        className="CoursePage_location"
+      />
+      <li
+        className="CoursePage_distance"
+      />
+      <li>
+        Par: 
+         
+         
+      </li>
+      <li
+        className="CoursePage_holeLabel"
+      >
+        Hole:
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        1) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        2) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        3) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        4) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        5) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        6) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        7) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        8) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        9) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        10) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        11) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        12) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        13) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        14) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        15) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        16) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        17) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        18) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_summary"
+      />
+      <li>
+        <a
+          className="CoursePage_url"
+          href=""
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </li>
+    </ul>
   </div>
   <div
     className="CourseItem_commands"
   >
     <Link
+      className="CourseItem_Link"
       to="/edit-course-page/undefined"
     >
       Edit Course
     </Link>
-    <button
-      className="Course_Delete"
-      onClick={[Function]}
-      type="button"
-    >
-      Delete
-    </button>
     <Link
+      className="CourseItem_Link"
       to="/add-score-page/undefined"
     >
       Add Score
     </Link>
     <Link
+      className="CourseItem_Link"
       to="/all-scores/undefined"
     >
       View Scores
     </Link>
   </div>
+  <button
+    className="Course_Delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
 </div>
 `;
 
 exports[`CoursePage component renders the CoursePage given props 1`] = `
 <div
-  className="CourseItem"
+  className="CoursePage_item"
 >
-  <Link
-    to="/course-page/1"
-  >
-    test-class-name
-  </Link>
   <div
     className="courseInfo"
   >
-    test-class-name
-     
-     
-     
-    Par: 
-     
-     
-     
-    Hole:
-     
-    1: 
-     
-     
-     
-    2: 
-     
-     
-     
-    3: 
-     
-     
-     
-    4: 
-     
-     
-     
-    5: 
-     
-     
-     
-    6: 
-     
-     
-     
-    7: 
-     
-     
-     
-    8: 
-     
-     
-     
-    9: 
-     
-     
-     
-    10: 
-     
-     
-     
-    11: 
-     
-     
-     
-    12: 
-     
-     
-     
-    13: 
-     
-     
-     
-    14: 
-     
-     
-     
-    15: 
-     
-     
-     
-    16: 
-     
-     
-     
-    17: 
-     
-     
-     
-    18: 
-     
-     
-     
-     
-     
+    <ul
+      className="CourseInfo_list"
+    >
+      <li
+        className="CoursePage_name"
+      >
+        test-class-name
+      </li>
+      <li
+        className="CoursePage_location"
+      />
+      <li
+        className="CoursePage_distance"
+      />
+      <li>
+        Par: 
+         
+         
+      </li>
+      <li
+        className="CoursePage_holeLabel"
+      >
+        Hole:
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        1) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        2) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        3) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        4) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        5) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        6) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        7) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        8) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        9) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        10) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        11) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        12) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        13) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        14) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        15) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        16) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        17) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_hole"
+      >
+        18) 
+         
+         
+      </li>
+      <li
+        className="CoursePage_summary"
+      />
+      <li>
+        <a
+          className="CoursePage_url"
+          href=""
+          rel="noopener noreferrer"
+          target="_blank"
+        />
+      </li>
+    </ul>
   </div>
   <div
     className="CourseItem_commands"
   >
     <Link
+      className="CourseItem_Link"
       to="/edit-course-page/1"
     >
       Edit Course
     </Link>
-    <button
-      className="Course_Delete"
-      onClick={[Function]}
-      type="button"
-    >
-      Delete
-    </button>
     <Link
+      className="CourseItem_Link"
       to="/add-score-page/1"
     >
       Add Score
     </Link>
     <Link
+      className="CourseItem_Link"
       to="/all-scores/1"
     >
       View Scores
     </Link>
   </div>
+  <button
+    className="Course_Delete"
+    onClick={[Function]}
+    type="button"
+  >
+    Delete
+  </button>
 </div>
 `;

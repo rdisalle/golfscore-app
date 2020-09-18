@@ -5,6 +5,7 @@ exports[`ViewCourseList component renders a .ViewCourseList by default 1`] = `
   className="ViewCourseList"
 >
   <Link
+    className="ViewCourseList_link"
     to="/add-course-page"
   >
     Add Course
