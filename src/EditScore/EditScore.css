@@ -41,8 +41,9 @@
 
 @media only screen and (min-device-width: 768px) {
     .EditScorePage {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 700px;
     }
     .EditScore_form {
         display: flex;
@@ -63,8 +64,9 @@
 
 @media screen and (min-device-width: 1200px) {
     .EditScorePage {
-        margin-left: 200px;
-        margin-right: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 915px;
         font-size: 20px;
     }
     .EditScore_form {
@@ -74,10 +76,10 @@
         flex-flow: wrap;
     }
     .EditScore_courseName {
-        margin-right: 28px;
+        margin-right: 48px;
     }
     .EditScore_courseSelect {
-        margin-right: 28px;
+        margin-right: 48px;
     }
     .EditScore_commandsCancel {
         margin-right: 250px;

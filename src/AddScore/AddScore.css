@@ -39,8 +39,9 @@
 
 @media only screen and (min-device-width: 768px) {
     .AddScorePage {
-        margin-left: 45px;
-        margin-right: 45px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
     }
     .AddScore_form {
         display: flex;
@@ -56,14 +57,15 @@
         width: 250px;
     }
     .AddScore_commands {
-        margin-left: 150px;
+        margin-left: 110px;
     }
 }
 
 @media screen and (min-device-width: 1200px) {
     .AddScorePage {
-        margin-left: 90px;
-        margin-right: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000px;
     }
     .AddScore_form {
         display: flex;

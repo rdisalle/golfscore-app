@@ -662,8 +662,8 @@ class EditCourse extends Component {
                     {' '}
                     <Required />
                 </label>
-                <textarea 
-                    className="EditCoursePage_formSummary"
+                <input 
+                    className="EditCoursePage_form"
                     type="text" 
                     name="course_summary"
                     id="course_summary"

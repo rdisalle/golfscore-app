@@ -71,133 +71,7 @@ class AddScore extends Component {
         }
         this.addNewScore(newScore)
         this.props.history.push(`/all-scores/${courseId}`);
-    }
-
-    validateName = () => {
-        if (this.context.newScore.name.value.length === 0) {
-          return 'Name is required'
-        }
-      }
-
-    validateScore_hole_one = () => {
-        if (this.context.newScore.score_hole_one.value.length === 0) {
-          return 'Hole one score is required'
-        }
-      }
-
-    validateScore_hole_two = () => {
-        if (this.context.newScore.score_hole_two.value.length === 0) {
-          return 'Hole two score is required'
-        }
-      }
-
-    validateScore_hole_three = () => {
-        if (this.context.newScore.score_hole_three.value.length === 0) {
-          return 'Hole three score is required'
-        }
-      }
-
-    validateScore_hole_four = () => {
-        if (this.context.newScore.score_hole_four.value.length === 0) {
-          return 'Hole four score is required'
-        }
-      }
-
-    validateScore_hole_five = () => {
-        if (this.context.newScore.score_hole_five.value.length === 0) {
-          return 'Hole five score is required'
-        }
-      }
-
-    validateScore_hole_six = () => {
-        if (this.context.newScore.score_hole_six.value.length === 0) {
-          return 'Hole six score is required'
-        }
-      }
-    
-    validateScore_hole_seven = () => {
-        if (this.context.newScore.score_hole_seven.value.length === 0) {
-          return 'Hole seven score is required'
-        }
-      }
-
-    validateScore_hole_eight = () => {
-        if (this.context.newScore.score_hole_eight.value.length === 0) {
-          return 'Hole eight score is required'
-        }
-      }
-
-    validateScore_hole_nine = () => {
-        if (this.context.newScore.score_hole_nine.value.length === 0) {
-          return 'Hole nine score is required'
-        }
-      }
-
-    validateScore_hole_ten = () => {
-        if (this.context.newScore.score_hole_ten.value.length === 0) {
-          return 'Hole ten score is required'
-        }
-      }
-
-    validateScore_hole_eleven = () => {
-        if (this.context.newScore.score_hole_eleven.value.length === 0) {
-          return 'Hole eleven score is required'
-        }
-      }
-
-    validateScore_hole_twelve = () => {
-        if (this.context.newScore.score_hole_twelve.value.length === 0) {
-          return 'Hole twelve score is required'
-        }
-      }
-
-    validateScore_hole_thirteen = () => {
-        if (this.context.newScore.score_hole_thirteen.value.length === 0) {
-          return 'Hole thirteen score is required'
-        }
-      }
-
-    validateScore_hole_fourteen = () => {
-        if (this.context.newScore.score_hole_fourteen.value.length === 0) {
-          return 'Hole fourteen score is required'
-        }
-      }
-
-    validateScore_hole_fifteen = () => {
-        if (this.context.newScore.score_hole_fifteen.value.length === 0) {
-          return 'Hole fifteen score is required'
-        }
-      }
-
-    validateScore_hole_sixteen = () => {
-        if (this.context.newScore.score_hole_sixteen.value.length === 0) {
-          return 'Hole sixteen score is required'
-        }
-      }
-    
-    validateScore_hole_seventeen = () => {
-        if (this.context.newScore.score_hole_seventeen.value.length === 0) {
-          return 'Hole seventeen score is required'
-        }
-      }
-
-    validateScore_hole_eighteen = () => {
-        if (this.context.newScore.score_hole_eighteen.value.length === 0) {
-          return 'Hole eighteen score is required'
-        }
-      }
-
-    validateTotal_score = () => {
-        if (this.context.newScore.total_score.value.length === 0) {
-          return 'Total score is required'
-        }
-      }
-
-    validateTo_par = () => {
-        if (this.context.newScore.to_par.value.length === 0) {
-          return 'To par is required'
-        }
-      }    
+    }  
 
     handleClickCancel = () => {
         const { courseId } = this.props.match.params
@@ -217,7 +91,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="name">
                 Score Name:
-                {this.context.newScore.name.touched && <p>{this.validateName()}</p>}
+                {this.context.newScore.name.touched}
             </label>
             <input 
                 className="AddScorePage_form"
@@ -251,7 +125,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_one">
                 Hole One Score:
-                {this.context.newScore.score_hole_one.touched && <p>{this.validateScore_hole_one()}</p>}
+                {this.context.newScore.score_hole_one.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -268,7 +142,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_two">
                 Hole Two Score:
-                {this.context.newScore.score_hole_two.touched && <p>{this.validateScore_hole_two()}</p>}
+                {this.context.newScore.score_hole_two.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -285,7 +159,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_three">
                 Hole Three Score:
-                {this.context.newScore.score_hole_three.touched && <p>{this.validateScore_hole_three()}</p>}
+                {this.context.newScore.score_hole_three.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -302,7 +176,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_four">
                 Hole Four Score:
-                {this.context.newScore.score_hole_four.touched && <p>{this.validateScore_hole_four()}</p>}
+                {this.context.newScore.score_hole_four.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -319,7 +193,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_five">
                 Hole Five Score:
-                {this.context.newScore.score_hole_five.touched && <p>{this.validateScore_hole_five()}</p>}
+                {this.context.newScore.score_hole_five.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -336,7 +210,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_six">
                 Hole Six Score:
-                {this.context.newScore.score_hole_six.touched && <p>{this.validateScore_hole_six()}</p>}
+                {this.context.newScore.score_hole_six.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -353,7 +227,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_seven">
                 Hole Seven Score:
-                {this.context.newScore.score_hole_seven.touched && <p>{this.validateScore_hole_seven()}</p>}
+                {this.context.newScore.score_hole_seven.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -370,7 +244,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_eight">
                 Hole Eight Score:
-                {this.context.newScore.score_hole_eight.touched && <p>{this.validateScore_hole_eight()}</p>}
+                {this.context.newScore.score_hole_eight.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -387,7 +261,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_nine">
                 Hole Nine Score:
-                {this.context.newScore.score_hole_nine.touched && <p>{this.validateScore_hole_nine()}</p>}
+                {this.context.newScore.score_hole_nine.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -404,7 +278,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_ten">
                 Hole Ten Score:
-                {this.context.newScore.score_hole_ten.touched && <p>{this.validateScore_hole_ten()}</p>}
+                {this.context.newScore.score_hole_ten.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -421,7 +295,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_Eleven">
                 Hole Eleven Score:
-                {this.context.newScore.score_hole_eleven.touched && <p>{this.validateScore_hole_eleven()}</p>}
+                {this.context.newScore.score_hole_eleven.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -438,7 +312,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_twelve">
                 Hole Twelve Score:
-                {this.context.newScore.score_hole_twelve.touched && <p>{this.validateScore_hole_twelve()}</p>}
+                {this.context.newScore.score_hole_twelve.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -455,7 +329,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_thirteen">
                 Hole Thirteen Score:
-                {this.context.newScore.score_hole_thirteen.touched && <p>{this.validateScore_hole_thirteen()}</p>}
+                {this.context.newScore.score_hole_thirteen.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -472,7 +346,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_fourteen">
                 Hole Fourteen Score:
-                {this.context.newScore.score_hole_fourteen.touched && <p>{this.validateScore_hole_fourteen()}</p>}
+                {this.context.newScore.score_hole_fourteen.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -489,7 +363,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_fifteen">
                 Hole Fifteen Score:
-                {this.context.newScore.score_hole_fifteen.touched && <p>{this.validateScore_hole_fifteen()}</p>}
+                {this.context.newScore.score_hole_fifteen.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -506,7 +380,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_sixteen">
                 Hole Sixteen Score:
-                {this.context.newScore.score_hole_sixteen.touched && <p>{this.validateScore_hole_sixteen()}</p>}
+                {this.context.newScore.score_hole_sixteen.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -523,7 +397,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_seventeen">
                 Hole Seventeen Score:
-                {this.context.newScore.score_hole_seventeen.touched && <p>{this.validateScore_hole_seventeen()}</p>}
+                {this.context.newScore.score_hole_seventeen.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -540,7 +414,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_eighteen">
                 Hole Eighteen Score:
-                {this.context.newScore.score_hole_eighteen.touched && <p>{this.validateScore_hole_eighteen()}</p>}
+                {this.context.newScore.score_hole_eighteen.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -557,7 +431,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="total_score">
                 Total Score:
-                {this.context.newScore.total_score.touched && <p>{this.validateTotal_score()}</p>}
+                {this.context.newScore.total_score.touched}
             </label>
             <input
                 className="AddScorePage_form"
@@ -574,7 +448,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="to_par">
                 To Par:
-                {this.context.newScore.to_par.touched && <p>{this.validateTo_par()}</p>}
+                {this.context.newScore.to_par.touched}
             </label>
             <input
                 className="AddScorePage_form"

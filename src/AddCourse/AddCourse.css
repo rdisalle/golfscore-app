@@ -39,8 +39,9 @@
 
 @media only screen and (min-device-width: 768px) {
     .AddCoursePage {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
     }
     .AddCourseForm {
         display: flex;
@@ -53,14 +54,15 @@
         margin-bottom: 25px;
     }
     .AddCourse_commands {
-        margin-left: 150px;
+        margin-left: 125px;
     }
 }
 
 @media screen and (min-device-width: 1200px) {
     .AddCoursePage {
-        margin-left: 100px;
-        margin-right: 100px;
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .AddCourseForm {
         display: flex;
@@ -71,8 +73,9 @@
     .AddCoursePage_form {
         display: block;
         margin-bottom: 25px;
+        width: 150px;
     }
     .AddCourse_commands {
-        margin-left: 250px;
+        margin-left: 260px;
     }
 }
