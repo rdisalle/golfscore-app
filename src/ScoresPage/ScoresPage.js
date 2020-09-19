@@ -49,7 +49,7 @@ class ScoresPage extends Component {
             return 
           })
           .then(() => {
-              this.props.delete()
+            this.props.delete()
             this.context.deleteScore(scoreId)
           })
           .catch(error => {
