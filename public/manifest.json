@@ -1,6 +1,6 @@
 {
-  "short_name": "GolfScore",
-  "name": "GolfScore",
+  "short_name": "golfscore",
+  "name": "golfscore",
   "icons": [
     {
       "src": "favicon.ico",
