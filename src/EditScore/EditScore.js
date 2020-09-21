@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './EditScore.css';
-import GolfContext from '../GolfContext'
+import GolfContext from '../GolfContext';
 import PropTypes from 'prop-types';
-import config from '../config'
+import config from '../config';
 
 const Required = () => (
     <span className="EditScore_required">*</span>
@@ -46,18 +46,18 @@ class EditScore extends Component {
         score_hole_eighteen: '',
         total_score: '',
         to_par: ''
-    }
+    };
 
     componentDidMount() {
-        const { scoreId } = this.props.match.params
+        const { scoreId } = this.props.match.params;
         fetch(`${config.API_ENDPOINT}/api/scores/${scoreId}`, {
           method: 'GET',
         })
           .then(res => {
             if (!res.ok)
-              return res.json().then(error => Promise.reject(error))
+              return res.json().then(error => Promise.reject(error));
     
-            return res.json()
+            return res.json();
           })
           .then(responseData => {
             this.setState({
@@ -85,115 +85,115 @@ class EditScore extends Component {
                 score_hole_eighteen: responseData.score_hole_eighteen,
                 total_score: responseData.total_score,
                 to_par: responseData.to_par,
-            })
+            });
           })
           .catch(error => {
-            console.error(error)
-            this.setState({ error })
-          })
-      }
+            console.error(error);
+            this.setState({ error });
+          });
+      };
 
     handleChangeName = e => {
-        this.setState({ name: e.target.value })
+        this.setState({ name: e.target.value });
     };
 
     handleChangeDate_modified = e => {
-        this.setState({ date_modified: e.target.value})
-    }
+        this.setState({ date_modified: e.target.value});
+    };
 
     handleChangeCourse_id = e => {
-        this.setState({ course_id: e.target.value})
-    }
+        this.setState({ course_id: e.target.value});
+    };
 
     handleChangeScore_hole_one = e => {
-        this.setState({ score_hole_one: e.target.value})
-    }
+        this.setState({ score_hole_one: e.target.value});
+    };
 
     handleChangeScore_hole_two = e => {
-        this.setState({ score_hole_two: e.target.value})
-    }
+        this.setState({ score_hole_two: e.target.value});
+    };
 
     handleChangeScore_hole_three = e => {
-        this.setState({ score_hole_three: e.target.value})
-    }
+        this.setState({ score_hole_three: e.target.value});
+    };
 
     handleChangeScore_hole_four = e => {
-        this.setState({ score_hole_four: e.target.value})
-    }
+        this.setState({ score_hole_four: e.target.value});
+    };
 
     handleChangeScore_hole_five = e => {
-        this.setState({ score_hole_five: e.target.value})
-    }
+        this.setState({ score_hole_five: e.target.value});
+    };
 
     handleChangeScore_hole_six = e => {
-        this.setState({ score_hole_six: e.target.value})
-    }
+        this.setState({ score_hole_six: e.target.value});
+    };
 
     handleChangeScore_hole_seven = e => {
-        this.setState({ score_hole_seven: e.target.value})
-    }
+        this.setState({ score_hole_seven: e.target.value});
+    };
 
     handleChangeScore_hole_eight = e => {
-        this.setState({ score_hole_eight: e.target.value})
-    }
+        this.setState({ score_hole_eight: e.target.value});
+    };
 
     handleChangeScore_hole_nine = e => {
-        this.setState({ score_hole_nine: e.target.value})
-    }
+        this.setState({ score_hole_nine: e.target.value});
+    };
 
     handleChangeScore_hole_ten = e => {
-        this.setState({ score_hole_ten: e.target.value})
-    }
+        this.setState({ score_hole_ten: e.target.value});
+    };
 
     handleChangeScore_hole_eleven = e => {
-        this.setState({ score_hole_eleven: e.target.value})
-    }
+        this.setState({ score_hole_eleven: e.target.value});
+    };
 
     handleChangeScore_hole_twelve = e => {
-        this.setState({ score_hole_twelve: e.target.value})
-    }
+        this.setState({ score_hole_twelve: e.target.value});
+    };
 
     handleChangeScore_hole_thirteen = e => {
-        this.setState({ score_hole_thirteen: e.target.value})
-    }
+        this.setState({ score_hole_thirteen: e.target.value});
+    };
 
     handleChangeScore_hole_fourteen = e => {
-        this.setState({ score_hole_fourteen: e.target.value})
-    }
+        this.setState({ score_hole_fourteen: e.target.value});
+    };
 
     handleChangeScore_hole_fifteen = e => {
-        this.setState({ score_hole_fifteen: e.target.value})
-    }
+        this.setState({ score_hole_fifteen: e.target.value});
+    };
 
     handleChangeScore_hole_sixteen = e => {
-        this.setState({ score_hole_sixteen: e.target.value})
-    }
+        this.setState({ score_hole_sixteen: e.target.value});
+    };
 
     handleChangeScore_hole_seventeen = e => {
-        this.setState({ score_hole_seventeen: e.target.value})
-    }
+        this.setState({ score_hole_seventeen: e.target.value});
+    };
 
     handleChangeScore_hole_eighteen = e => {
-        this.setState({ score_hole_eighteen: e.target.value})
-    }
+        this.setState({ score_hole_eighteen: e.target.value});
+    };
 
     handleChangeTotal_score = e => {
-        this.setState({ total_score: e.target.value})
-    }
+        this.setState({ total_score: e.target.value});
+    };
 
     handleChangeTo_par = e => {
-        this.setState({ to_par: e.target.value})
-    }
+        this.setState({ to_par: e.target.value});
+    };
 
     handleSubmit = e => {
         e.preventDefault()
-        const { scoreId } = this.props.match.params
+        const { scoreId } = this.props.match.params;
         const { id, name, date_modified, course_id, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
             score_hole_eight, score_hole_nine, score_hole_ten, score_hole_eleven, score_hole_twelve, score_hole_thirteen, score_hole_fourteen, score_hole_fifteen, score_hole_sixteen,
-            score_hole_seventeen, score_hole_eighteen, total_score, to_par } = this.state
+            score_hole_seventeen, score_hole_eighteen, total_score, to_par } = this.state;
         const newScore = { id, name, date_modified, course_id, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
             score_hole_eight, score_hole_nine, score_hole_ten, score_hole_eleven, score_hole_twelve, score_hole_thirteen, score_hole_fourteen, score_hole_fifteen, score_hole_sixteen,
-            score_hole_seventeen, score_hole_eighteen, total_score, to_par }
+            score_hole_seventeen, score_hole_eighteen, total_score, to_par };
         fetch(`${config.API_ENDPOINT}/api/scores/${scoreId}`, {
           method: 'PATCH',
           body: JSON.stringify(newScore),
@@ -202,17 +202,17 @@ class EditScore extends Component {
           },
         })
           .then(res => {
-            if (!res.ok)
-              return res.json().then(error => Promise.reject(error))
+            if (!res.ok);
+              return res.json().then(error => Promise.reject(error));
           })
           .then(() => {
-            this.resetFields(newScore)
-            this.context.updateScore(newScore)
-            this.props.history.push(`/course-score/${scoreId}`)
+            this.resetFields(newScore);
+            this.context.updateScore(newScore);
+            this.props.history.push(`/course-score/${scoreId}`);
           })
           .catch(error => {
-            console.error(error)
-            this.setState({ error })
+            console.error(error);
+            this.setState({ error });
           })
       }
 
@@ -221,8 +221,8 @@ class EditScore extends Component {
           <option key={course.id} name={course.id} value={course.id}>
             {course.name}
           </option>
-        ))
-      }
+        ));
+      };
 
       resetFields = (newFields) => {
         this.setState({
@@ -249,18 +249,18 @@ class EditScore extends Component {
             score_hole_eighteen: newFields.score_hole_eighteen || '',
             total_score: newFields.total_score || '',
             to_par: newFields.to_par || '',
-        })
-      }
+        });
+      };
 
       handleClickCancel = () => {
-        const { scoreId } = this.props.match.params
-        this.props.history.push(`/course-score/${scoreId}`)
+        const { scoreId } = this.props.match.params;
+        this.props.history.push(`/course-score/${scoreId}`);
       };
 
   render() {
     const { error, name, score_hole_one, score_hole_two, score_hole_three, score_hole_four, score_hole_five, score_hole_six, score_hole_seven,
         score_hole_eight, score_hole_nine, score_hole_ten, score_hole_eleven, score_hole_twelve, score_hole_thirteen, score_hole_fourteen, score_hole_fifteen, score_hole_sixteen,
-        score_hole_seventeen, score_hole_eighteen, total_score, to_par } = this.state
+        score_hole_seventeen, score_hole_eighteen, total_score, to_par } = this.state;
     return (
       <div className="EditScorePage">
         <div className="EditScorePage_heading">
@@ -657,7 +657,7 @@ class EditScore extends Component {
         </form>
         </div>
     );
-  }
-}
+  };
+};
 
 export default EditScore;

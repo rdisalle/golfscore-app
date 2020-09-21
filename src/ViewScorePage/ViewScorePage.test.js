@@ -29,16 +29,16 @@ describe(`ViewScorePage component`, () => {
         "total_score": "80",
         "to_par": "+8"
         },
-  }
+  };
 
   it('renders a .ViewScorePage by default', () => {
-    const wrapper = shallow(<ViewScorePage />)
-    expect(toJson(wrapper)).toMatchSnapshot()
-  })
+    const wrapper = shallow(<ViewScorePage />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 
   it('renders a Score with score prop', () => {
     const score = shallow(<ViewScorePage {...props} />)
-      .find('Score')
-    expect(toJson(score)).toMatchSnapshot()
-  })
-})
+      .find('Score');
+    expect(toJson(score)).toMatchSnapshot();
+  });
+});

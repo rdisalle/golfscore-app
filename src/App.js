@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
 import './App.css';
-import NavBar from '../src/NavBar/NavBar'
-import LandingPage from '../src/LandingPage/LandingPage'
-import ViewCourseList from '../src/ViewCourseList/ViewCourseList'
-import CourseItem from '../src/CourseItem/CourseItem'
-import AllScores from '../src/AllScores/AllScores'
-import ViewScorePage from '../src/ViewScorePage/ViewScorePage'
-import AddScore from '../src/AddScore/AddScore'
-import AddCourse from '../src/AddCourse/AddCourse'
-import EditScore from '../src/EditScore/EditScore'
-import EditCourse from '../src/EditCourse/EditCourse'
-import GolfContext from '../src/GolfContext'
-import config from '../src/config'
+import NavBar from '../src/NavBar/NavBar';
+import LandingPage from '../src/LandingPage/LandingPage';
+import ViewCourseList from '../src/ViewCourseList/ViewCourseList';
+import CourseItem from '../src/CourseItem/CourseItem';
+import AllScores from '../src/AllScores/AllScores';
+import ViewScorePage from '../src/ViewScorePage/ViewScorePage';
+import AddScore from '../src/AddScore/AddScore';
+import AddCourse from '../src/AddCourse/AddCourse';
+import EditScore from '../src/EditScore/EditScore';
+import EditCourse from '../src/EditCourse/EditCourse';
+import GolfContext from '../src/GolfContext';
+import config from '../src/config';
 
 class App extends Component {
   state = {
@@ -265,17 +265,17 @@ class App extends Component {
       fetch(`${config.API_ENDPOINT}/api/courses`), 
     ])
       .then(([scoresRes, coursesRes]) => {
-        if (!scoresRes.ok) return scoresRes.json().then(e => Promise.reject(e))
-        if (!coursesRes.ok) return coursesRes.json().then(e => Promise.reject(e))
+        if (!scoresRes.ok) return scoresRes.json().then(e => Promise.reject(e));
+        if (!coursesRes.ok) return coursesRes.json().then(e => Promise.reject(e));
 
-        return Promise.all([scoresRes.json(), coursesRes.json()])
+        return Promise.all([scoresRes.json(), coursesRes.json()]);
       })
       .then(([scores, courses]) => {
-        this.setState({ scores, courses })
+        this.setState({ scores, courses });
       })
       .catch(error => {
-        console.error({ error })
-      })
+        console.error({ error });
+      });
   }
 
   updateNewCourseData = (input, value) => {
@@ -288,7 +288,7 @@ class App extends Component {
           value: value,
         },
       },
-    })
+    });
   }
 
   updateNewScoreData = (input, value) => {
@@ -301,31 +301,31 @@ class App extends Component {
           value: value,
         },
       },
-    })
+    });
   }
 
   handleAddCourse = newCourse => {
     this.setState({
       courses: [...this.state.courses, newCourse],
-    })
+    });
   }
 
   handleAddScore = score => {
     this.setState({
       scores: [...this.state.scores, score],
-    })
+    });
   }
 
   handleDeleteCourse = courseId => {
     this.setState({
       courses: this.state.courses.filter(course => course.id !== courseId),
-    })
+    });
   }
 
   handleDeleteScore = scoreId => {
     this.setState({
       scores: this.state.scores.filter(score => score.id !== scoreId),
-    })
+    });
   }
 
   updateCourse = updatedCourse => {
@@ -333,7 +333,7 @@ class App extends Component {
       courses: this.state.courses.map(course =>
         (course.id !== updatedCourse.id) ? course : updatedCourse
       )
-    })
+    });
   }
 
   updateScore = updatedScore => {
@@ -341,12 +341,11 @@ class App extends Component {
       scores: this.state.scores.map(score =>
         (score.id !== updatedScore.id) ? score : updatedScore
       )
-    })
+    });
   }
 
 
   render() {  
-    console.log(this.state);
     const value = {
       scores: this.state.scores,
       courses: this.state.courses,

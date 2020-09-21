@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import AllScores from './AllScores'
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import AllScores from './AllScores';
 
 describe(`AllScores component`, () => {
   const props = {
@@ -107,16 +107,16 @@ describe(`AllScores component`, () => {
         "to_par": "+8"
       },
     ]
-  }
+  };
 
   it('renders a .AllScores by default', () => {
-    const wrapper = shallow(<AllScores />)
-    expect(toJson(wrapper)).toMatchSnapshot()
-  })
+    const wrapper = shallow(<AllScores />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 
   it('renders a Score in ul for each score in array', () => {
     const ul = shallow(<AllScores {...props} />)
-      .find('ul')
-    expect(toJson(ul)).toMatchSnapshot()
-  })
-})
+      .find('ul');
+    expect(toJson(ul)).toMatchSnapshot();
+  });
+});

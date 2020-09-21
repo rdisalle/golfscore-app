@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AddScore.css';
 import config from '../config';
-import GolfContext from '../GolfContext'
+import GolfContext from '../GolfContext';
 import PropTypes from 'prop-types';
 
 class AddScore extends Component {
@@ -14,7 +14,7 @@ class AddScore extends Component {
         }).isRequired,
       };
 
-    static contextType = GolfContext
+    static contextType = GolfContext;
 
     addNewScore = score => {    
         fetch(`${config.API_ENDPOINT}/api/scores/`, {
@@ -25,13 +25,12 @@ class AddScore extends Component {
           body: JSON.stringify(score),
         })
           .then(res => {
-            console.log(JSON.stringify(score))
-            return res.json()
+            return res.json();
           })
           .then(resJSON => this.context.addScore(resJSON))
           .catch(error => {
-            console.error({ error })
-            return "There was an error with the request. Try again later."
+            console.error({ error });
+            return "There was an error with the request. Try again later.";
           })
       }
       parseCourses = () => {
@@ -39,12 +38,12 @@ class AddScore extends Component {
           <option key={course.id} name={course.id} value={course.id}>
             {course.name}
           </option>
-        ))
-      }
+        ));
+      };
     
     handleFormSubmit = e => {
-        const { courseId } = this.props.match.params
-        e.preventDefault(e)
+        const { courseId } = this.props.match.params;
+        e.preventDefault(e);
         const newScore = {
             name: e.target.name.value,
             course_id: e.target.course_id.value,
@@ -69,13 +68,13 @@ class AddScore extends Component {
             total_score: e.target.total_score.value,
             to_par: e.target.to_par.value,
         }
-        this.addNewScore(newScore)
+        this.addNewScore(newScore);
         this.props.history.push(`/all-scores/${courseId}`);
-    }  
+    };
 
     handleClickCancel = () => {
         const { courseId } = this.props.match.params
-        this.props.history.push(`/all-scores/${courseId}`)
+        this.props.history.push(`/all-scores/${courseId}`);
       };
 
   render() {
@@ -91,7 +90,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="name">
                 Score Name:
-                {this.context.newScore.name.touched}
+                {this.context.newScore.name.touched};
             </label>
             <input 
                 className="AddScorePage_form"
@@ -125,7 +124,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_one">
                 Hole One Score:
-                {this.context.newScore.score_hole_one.touched}
+                {this.context.newScore.score_hole_one.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -142,7 +141,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_two">
                 Hole Two Score:
-                {this.context.newScore.score_hole_two.touched}
+                {this.context.newScore.score_hole_two.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -159,7 +158,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_three">
                 Hole Three Score:
-                {this.context.newScore.score_hole_three.touched}
+                {this.context.newScore.score_hole_three.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -176,7 +175,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_four">
                 Hole Four Score:
-                {this.context.newScore.score_hole_four.touched}
+                {this.context.newScore.score_hole_four.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -193,7 +192,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_five">
                 Hole Five Score:
-                {this.context.newScore.score_hole_five.touched}
+                {this.context.newScore.score_hole_five.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -210,7 +209,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_six">
                 Hole Six Score:
-                {this.context.newScore.score_hole_six.touched}
+                {this.context.newScore.score_hole_six.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -227,7 +226,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_seven">
                 Hole Seven Score:
-                {this.context.newScore.score_hole_seven.touched}
+                {this.context.newScore.score_hole_seven.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -244,7 +243,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_eight">
                 Hole Eight Score:
-                {this.context.newScore.score_hole_eight.touched}
+                {this.context.newScore.score_hole_eight.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -261,7 +260,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_nine">
                 Hole Nine Score:
-                {this.context.newScore.score_hole_nine.touched}
+                {this.context.newScore.score_hole_nine.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -278,7 +277,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_ten">
                 Hole Ten Score:
-                {this.context.newScore.score_hole_ten.touched}
+                {this.context.newScore.score_hole_ten.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -295,7 +294,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_Eleven">
                 Hole Eleven Score:
-                {this.context.newScore.score_hole_eleven.touched}
+                {this.context.newScore.score_hole_eleven.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -312,7 +311,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_twelve">
                 Hole Twelve Score:
-                {this.context.newScore.score_hole_twelve.touched}
+                {this.context.newScore.score_hole_twelve.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -329,7 +328,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_thirteen">
                 Hole Thirteen Score:
-                {this.context.newScore.score_hole_thirteen.touched}
+                {this.context.newScore.score_hole_thirteen.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -346,7 +345,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_fourteen">
                 Hole Fourteen Score:
-                {this.context.newScore.score_hole_fourteen.touched}
+                {this.context.newScore.score_hole_fourteen.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -363,7 +362,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_fifteen">
                 Hole Fifteen Score:
-                {this.context.newScore.score_hole_fifteen.touched}
+                {this.context.newScore.score_hole_fifteen.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -380,7 +379,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_sixteen">
                 Hole Sixteen Score:
-                {this.context.newScore.score_hole_sixteen.touched}
+                {this.context.newScore.score_hole_sixteen.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -397,7 +396,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_seventeen">
                 Hole Seventeen Score:
-                {this.context.newScore.score_hole_seventeen.touched}
+                {this.context.newScore.score_hole_seventeen.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -414,7 +413,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="score_hole_eighteen">
                 Hole Eighteen Score:
-                {this.context.newScore.score_hole_eighteen.touched}
+                {this.context.newScore.score_hole_eighteen.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -431,7 +430,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="total_score">
                 Total Score:
-                {this.context.newScore.total_score.touched}
+                {this.context.newScore.total_score.touched};
             </label>
             <input
                 className="AddScorePage_form"
@@ -448,7 +447,7 @@ class AddScore extends Component {
             <div>
             <label htmlFor="to_par">
                 To Par:
-                {this.context.newScore.to_par.touched}
+                {this.context.newScore.to_par.touched};
             </label>
             <input
                 className="AddScorePage_form"

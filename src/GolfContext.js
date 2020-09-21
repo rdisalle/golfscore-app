@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const GolfContext = React.createContext({
     courses: [],
@@ -9,6 +9,6 @@ const GolfContext = React.createContext({
     addScore: () => {},
     updateCourse: () => {},
     updateScore: () => {},
-})
+});
 
 export default GolfContext; 

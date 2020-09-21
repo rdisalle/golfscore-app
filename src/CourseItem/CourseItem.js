@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './CourseItem.css';
 import CoursePage from '../CoursePage/CoursePage';
-import GolfContext from '../GolfContext'
-import PropTypes from 'prop-types'
+import GolfContext from '../GolfContext';
+import PropTypes from 'prop-types';
 
 class CourseItem extends Component {
   static defaultProps = {
@@ -14,16 +14,16 @@ class CourseItem extends Component {
   static contextType = GolfContext;
 
   onDelete = () => {
-    this.props.history.push('/view-course-list')
-  }
+    this.props.history.push('/view-course-list');
+  };
 
   findCourse = (courses=[], courseId) =>
-  courses.find(course => course.id === JSON.parse(courseId))
+  courses.find(course => course.id === JSON.parse(courseId));
 
   render() {
-    const { courses } = this.context
-    const { courseId } = this.props.match.params
-    const course = this.findCourse(courses, courseId) || { content: '' }
+    const { courses } = this.context;
+    const { courseId } = this.props.match.params;
+    const course = this.findCourse(courses, courseId) || { content: '' };
 
     return (
       <section className="CourseItem">
@@ -57,8 +57,8 @@ class CourseItem extends Component {
             />
       </section>
     );
-  }
-}
+  };
+};
 
 CourseItem.propTypes = {
   match: PropTypes.object

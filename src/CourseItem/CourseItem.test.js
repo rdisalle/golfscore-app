@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import CourseItem from './CourseItem'
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import CourseItem from './CourseItem';
 
 describe(`CourseItem component`, () => {
   const props = {
@@ -32,16 +32,16 @@ describe(`CourseItem component`, () => {
             "course_summary": "This is my new course",
             "course_url": "www.mycourse.com"
           },
-  }
+  };
 
   it('renders a .CourseItem by default', () => {
-    const wrapper = shallow(<CourseItem/>)
-    expect(toJson(wrapper)).toMatchSnapshot()
-  })
+    const wrapper = shallow(<CourseItem/>);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 
   it('renders a Course with course prop', () => {
     const course = shallow(<CourseItem {...props} />)
-      .find('Course')
-    expect(toJson(course)).toMatchSnapshot()
-  })
-})
+      .find('Course');
+    expect(toJson(course)).toMatchSnapshot();
+  });
+});

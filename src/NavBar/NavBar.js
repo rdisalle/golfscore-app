@@ -15,7 +15,7 @@ class NavBar extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 export default NavBar;

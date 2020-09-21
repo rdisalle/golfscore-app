@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import ViewCourseList from './ViewCourseList'
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import ViewCourseList from './ViewCourseList';
 
 describe(`ViewCourseList component`, () => {
   const props = {
@@ -115,16 +115,16 @@ describe(`ViewCourseList component`, () => {
         "course_url": "www.mycourse.com"
       },
     ]
-  }
+  };
 
   it('renders a .ViewCourseList by default', () => {
-    const wrapper = shallow(<ViewCourseList />)
-    expect(toJson(wrapper)).toMatchSnapshot()
-  })
+    const wrapper = shallow(<ViewCourseList />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 
   it('renders a Course in ul for each course in array', () => {
     const ul = shallow(<ViewCourseList {...props} />)
-      .find('ul')
-    expect(toJson(ul)).toMatchSnapshot()
-  })
-})
+      .find('ul');
+    expect(toJson(ul)).toMatchSnapshot();
+  });
+});

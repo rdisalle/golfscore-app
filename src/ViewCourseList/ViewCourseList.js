@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import './ViewCourseList.css';
 import CoursePage from '../CoursePage/CoursePage';
 import { Link } from 'react-router-dom';
-import GolfContext from '../GolfContext'
-import PropTypes from 'prop-types'
+import GolfContext from '../GolfContext';
+import PropTypes from 'prop-types';
 
 class ViewCourseList extends Component {
 
   static contextType = GolfContext;
 
   countScoresForCourse = (scores=[], courseId) =>
-  scores.filter(score => score.course_id === courseId).length
+  scores.filter(score => score.course_id === courseId).length;
 
   onDelete = () => {
-    this.props.history.push('/view-course-list')
-  }
+    this.props.history.push('/view-course-list');
+  };
 
   render() {
-    const { courses=[], scores=[] } = this.context
+    const { courses=[], scores=[] } = this.context;
     return (
       <div className="ViewCourseList">
         <Link className="ViewCourseList_link" to={'/add-course-page'}>
@@ -61,16 +61,16 @@ class ViewCourseList extends Component {
               />
               <div className="ViewCourseList_score">
               <span className="ViewCourseList_num-scores">
-                  Scores: ({this.countScoresForCourse(scores, course.id)})
+                  Scores: ({this.countScoresForCourse(scores, course.id)});
               </span>
           </div>
             </li>
-          )}
+          )};
         </ul>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 ViewCourseList.propTypes = {
   history: PropTypes.object

@@ -1,40 +1,40 @@
 import React, { Component } from 'react';
 import './AllScores.css';
-import ScoresPage from '../ScoresPage/ScoresPage'
+import ScoresPage from '../ScoresPage/ScoresPage';
 import { Link } from 'react-router-dom';
 import GolfContext from '../GolfContext';
-import PropTypes from 'prop-types' 
+import PropTypes from 'prop-types' ;
 
 class AllScores extends Component {
     static defaultProps = {
         match: {
           params: {}
         }
-      }
+      };
     
 
     static contextType = GolfContext;
 
     onDelete = () => {
-        const { courseId } = this.props.match.params
-        this.props.history.push(`/all-scores/${courseId}`)
-      }
+        const { courseId } = this.props.match.params;
+        this.props.history.push(`/all-scores/${courseId}`);
+      };
     
     getScoresForCourse = (scores=[], courseId) => (
         (!courseId)
             ? scores
             : scores.filter(score => score.course_id === JSON.parse(courseId))
-    )
+    );
 
     findCourse = (courses=[], courseId) =>
-    courses.find(course => course.id === JSON.parse(courseId))
+    courses.find(course => course.id === JSON.parse(courseId));
 
     render() {
-        const { courseId } = this.props.match.params
-        const { scores=[] } = this.context
-        const scoresForCourse = this.getScoresForCourse(scores, courseId)
-        const { courses } = this.context
-        const course = this.findCourse(courses, courseId) || { content: '' }
+        const { courseId } = this.props.match.params;
+        const { scores=[] } = this.context;
+        const scoresForCourse = this.getScoresForCourse(scores, courseId);
+        const { courses } = this.context;
+        const course = this.findCourse(courses, courseId) || { content: '' };
         return (
             <div className="AllScores"> 
                 <h2 className="AllScores_course">
@@ -80,8 +80,8 @@ class AllScores extends Component {
                 </ul>
             </div>
         );
-    }
-}
+    };
+};
 
 AllScores.propTypes = {
     match: PropTypes.object

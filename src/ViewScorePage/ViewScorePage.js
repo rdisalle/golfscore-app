@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './ViewScorePage.css';
-import ScoresPage from '../ScoresPage/ScoresPage'
-import GolfContext from '../GolfContext'
-import PropTypes from 'prop-types' 
+import ScoresPage from '../ScoresPage/ScoresPage';
+import GolfContext from '../GolfContext';
+import PropTypes from 'prop-types';
 
 class ViewScorePage extends Component {
     static defaultProps = {
@@ -14,19 +14,19 @@ class ViewScorePage extends Component {
     static contextType = GolfContext;
 
     onDelete = () => {
-        const { scores } = this.context
-        const { scoreId } = this.props.match.params
-        const score = this.findScore(scores, scoreId) || { content: '' }
-        this.props.history.push(`/all-scores/${score.course_id}`)
+        const { scores } = this.context;
+        const { scoreId } = this.props.match.params;
+        const score = this.findScore(scores, scoreId) || { content: '' };
+        this.props.history.push(`/all-scores/${score.course_id}`);
       }
 
     findScore = (scores=[], scoreId) =>
-    scores.find(score => score.id === JSON.parse(scoreId))
+    scores.find(score => score.id === JSON.parse(scoreId));
 
   render() {
-    const { scores } = this.context
-    const { scoreId } = this.props.match.params
-    const score = this.findScore(scores, scoreId) || { content: '' }
+    const { scores } = this.context;
+    const { scoreId } = this.props.match.params;
+    const score = this.findScore(scores, scoreId) || { content: '' };
 
     return (
         <section className="ViewScorePage">
@@ -58,8 +58,8 @@ class ViewScorePage extends Component {
             />
         </section>
     );
-  }
-}
+  };
+};
 
 ViewScorePage.propTypes = {
     match: PropTypes.object

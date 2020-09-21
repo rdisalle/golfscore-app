@@ -31,7 +31,7 @@ class CoursePage extends Component {
       course_par_hole_eighteen: '',
       course_summary: '',
       course_url: '',
-    }
+    };
   
     static contextType = GolfContext;
   
@@ -47,17 +47,17 @@ class CoursePage extends Component {
       })
         .then(res => {
           if (!res.ok)
-            return res.json().then(e => Promise.reject(e))
-          return 
+            return res.json().then(e => Promise.reject(e));
+          return;
         })
         .then(() => {
-          this.context.deleteCourse(courseId)
-          this.props.delete()
+          this.context.deleteCourse(courseId);
+          this.props.delete();
         })
         .catch(error => {
-          console.error({ error })
-        })
-    }
+          console.error({ error });
+        });
+    };
 
     render() {
       const { id, name, location, course_distance, course_par, course_par_hole_one, course_par_hole_two,
@@ -65,7 +65,7 @@ class CoursePage extends Component {
       course_par_hole_seven, course_par_hole_eight, course_par_hole_nine, course_par_hole_ten, 
       course_par_hole_eleven, course_par_hole_twelve, course_par_hole_thirteen, course_par_hole_fourteen,
       course_par_hole_fifteen, course_par_hole_sixteen, course_par_hole_seventeen, course_par_hole_eighteen,
-      course_summary, course_url } = this.props
+      course_summary, course_url } = this.props;
     return (
       <div className="CoursePage_item">
         <div className="courseInfo">
@@ -169,8 +169,8 @@ class CoursePage extends Component {
           </button>
       </div>
     );
-  }
-}
+  };
+};
 
 CoursePage.propTypes = {
   id: PropTypes.number,

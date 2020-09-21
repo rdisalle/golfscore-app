@@ -5,7 +5,7 @@ import GolfContext from '../GolfContext';
 import PropTypes from 'prop-types';
 
 class AddCourse extends Component {
-    static contextType = GolfContext
+    static contextType = GolfContext;
 
     addNewCourse = course => {    
         fetch(`${config.API_ENDPOINT}/api/courses/`, {
@@ -16,18 +16,18 @@ class AddCourse extends Component {
           body: JSON.stringify(course),
         })
           .then(res => {
-            console.log(JSON.stringify(course))
-            return res.json()
+            console.log(JSON.stringify(course));
+            return res.json();
           })
           .then(resJSON => this.context.addCourse(resJSON))
           .catch(error => {
-            console.error({ error })
-            return "There was an error with the request. Try again later."
-          })
-      }
+            console.error({ error });
+            return "There was an error with the request. Try again later.";
+          });
+      };
 
     handleFormSubmit = e => {
-        e.preventDefault(e)
+        e.preventDefault(e);
         const newCourse = {
             name: e.target.name.value,
             location: e.target.location.value,
@@ -53,14 +53,13 @@ class AddCourse extends Component {
             course_par_hole_eighteen: e.target.course_par_hole_eighteen.value,
             course_summary: e.target.course_summary.value,
             course_url: e.target.course_url.value,
-        }
-        console.log(newCourse);
-        this.addNewCourse(newCourse)
+        };
+        this.addNewCourse(newCourse);
         this.props.history.push('/view-course-list');
-    }  
+    };
 
     handleClickCancel = () => {
-        this.props.history.push('/view-course-list')
+        this.props.history.push('/view-course-list');
       };
 
     render() {
@@ -76,7 +75,7 @@ class AddCourse extends Component {
           <div>
             <label htmlFor="name">
                 Name:
-                {this.context.newCourse.name.touched}
+                {this.context.newCourse.name.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -93,7 +92,7 @@ class AddCourse extends Component {
           <div>
             <label  htmlFor="location">
                 Location:
-                {this.context.newCourse.location.touched}
+                {this.context.newCourse.location.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -110,7 +109,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_distance">
                 Course Distance:
-                {this.context.newCourse.course_distance.touched}
+                {this.context.newCourse.course_distance.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -127,7 +126,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par">
                 Course Par:
-                {this.context.newCourse.course_par.touched}
+                {this.context.newCourse.course_par.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -144,7 +143,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_one">
                 Hole One Par:
-                {this.context.newCourse.course_par_hole_one.touched}
+                {this.context.newCourse.course_par_hole_one.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -161,7 +160,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_two">
                 Hole Two Par:
-                {this.context.newCourse.course_par_hole_two.touched}
+                {this.context.newCourse.course_par_hole_two.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -178,7 +177,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_three">
                 Hole Three Par:
-                {this.context.newCourse.course_par_hole_three.touched}
+                {this.context.newCourse.course_par_hole_three.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -195,7 +194,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_four">
                 Hole Four Par:
-                {this.context.newCourse.course_par_hole_four.touched}
+                {this.context.newCourse.course_par_hole_four.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -212,7 +211,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_five">
                 Hole Five Par:
-                {this.context.newCourse.course_par_hole_five.touched}
+                {this.context.newCourse.course_par_hole_five.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -229,7 +228,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_six">
                 Hole Six Par:
-                {this.context.newCourse.course_par_hole_six.touched}
+                {this.context.newCourse.course_par_hole_six.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -246,7 +245,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_seven">
                 Hole Seven Par:
-                {this.context.newCourse.course_par_hole_seven.touched && <p>{this.validateCourse_par_hole_seven()}</p>}
+                {this.context.newCourse.course_par_hole_seven.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -263,7 +262,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_eight">
                 Hole Eight Par:
-                {this.context.newCourse.course_par_hole_eight.touched}
+                {this.context.newCourse.course_par_hole_eight.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -280,7 +279,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_nine">
                 Hole Nine Par:
-                {this.context.newCourse.course_par_hole_nine.touched}
+                {this.context.newCourse.course_par_hole_nine.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -297,7 +296,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_ten">
                 Hole Ten Par:
-                {this.context.newCourse.course_par_hole_ten.touched}
+                {this.context.newCourse.course_par_hole_ten.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -314,7 +313,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_eleven">
                 Hole Eleven Par:
-                {this.context.newCourse.course_par_hole_eleven.touched}
+                {this.context.newCourse.course_par_hole_eleven.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -331,7 +330,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_twelve">
                 Hole Twelve Par:
-                {this.context.newCourse.course_par_hole_twelve.touched}
+                {this.context.newCourse.course_par_hole_twelve.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -348,7 +347,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_thirteen">
                 Hole Thirteen Par:
-                {this.context.newCourse.course_par_hole_thirteen.touched}
+                {this.context.newCourse.course_par_hole_thirteen.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -365,7 +364,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_fourteen">
                 Hole Fourteen Par:
-                {this.context.newCourse.course_par_hole_fourteen.touched}
+                {this.context.newCourse.course_par_hole_fourteen.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -382,7 +381,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_fifteen">
                 Hole Fifteen Par:
-                {this.context.newCourse.course_par_hole_fifteen.touched}
+                {this.context.newCourse.course_par_hole_fifteen.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -399,7 +398,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_sixteen">
                 Hole Sixteen Par:
-                {this.context.newCourse.course_par_hole_sixteen.touched}
+                {this.context.newCourse.course_par_hole_sixteen.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -416,7 +415,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_seventeen">
                 Hole Seventeen Par:
-                {this.context.newCourse.course_par_hole_seventeen.touched}
+                {this.context.newCourse.course_par_hole_seventeen.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -433,7 +432,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_par_hole_eighteen">
                 Hole Eighteen Par:
-                {this.context.newCourse.course_par_hole_eighteen.touched}
+                {this.context.newCourse.course_par_hole_eighteen.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -450,7 +449,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_summary">
                 Course Summary:
-                {this.context.newCourse.course_summary.touched}
+                {this.context.newCourse.course_summary.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -467,7 +466,7 @@ class AddCourse extends Component {
             <div>
             <label htmlFor="course_url">
                 Course Website:
-                {this.context.newCourse.course_url.touched}
+                {this.context.newCourse.course_url.touched};
             </label>
             <input
                 className="AddCoursePage_form"
@@ -492,8 +491,8 @@ class AddCourse extends Component {
         </form>
         </div>
     );
-  }
-}
+  };
+};
 
 AddCourse.propTypes = {
     history: PropTypes.object

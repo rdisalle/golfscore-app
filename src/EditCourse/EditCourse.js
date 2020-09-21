@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './EditCourse.css';
-import GolfContext from '../GolfContext'
+import GolfContext from '../GolfContext';
 import PropTypes from 'prop-types';
-import config from '../config'
+import config from '../config';
 
 const Required = () => (
     <span className="EditCourse_required">*</span>
-)
+);
 
 class EditCourse extends Component {
     static propTypes = {
@@ -47,18 +47,18 @@ class EditCourse extends Component {
         course_par_hole_eighteen: '',
         course_summary: '',
         course_url: ''
-    }
+    };
 
     componentDidMount() {
-        const { courseId } = this.props.match.params
+        const { courseId } = this.props.match.params;
         fetch(`${config.API_ENDPOINT}/api/courses/${courseId}`, {
           method: 'GET',
         })
           .then(res => {
             if (!res.ok)
-              return res.json().then(error => Promise.reject(error))
+              return res.json().then(error => Promise.reject(error));
     
-            return res.json()
+            return res.json();
           })
           .then(responseData => {
             this.setState({
@@ -87,125 +87,125 @@ class EditCourse extends Component {
                 course_par_hole_eighteen: responseData.course_par_hole_eighteen,
                 course_summary: responseData.course_summary,
                 course_url: responseData.course_url,
-            })
+            });
           })
           .catch(error => {
-            console.error(error)
-            this.setState({ error })
-          })
-      }
+            console.error(error);
+            this.setState({ error });
+          });
+      };
 
     handleChangeName = e => {
-        this.setState({ name: e.target.value })
+        this.setState({ name: e.target.value });
     };
 
     handleChangeLocation = e => {
-        this.setState({ location: e.target.value })
+        this.setState({ location: e.target.value });
     };
     
     handleChangeCourse_distance = e => {
-        this.setState({ course_distance: e.target.value})
-    }
+        this.setState({ course_distance: e.target.value});
+    };
     
     handleChangeCourse_par = e => {
-        this.setState({ course_par: e.target.value})
-    }
+        this.setState({ course_par: e.target.value});
+    };
       
     handleChangeCourse_par_hole_one = e => {
-        this.setState({ course_par_hole_one: e.target.value})
-    }
+        this.setState({ course_par_hole_one: e.target.value});
+    };
 
     handleChangeCourse_par_hole_two = e => {
-        this.setState({ course_par_hole_two: e.target.value})
-    }
+        this.setState({ course_par_hole_two: e.target.value});
+    };
 
     handleChangeCourse_par_hole_three = e => {
-        this.setState({ course_par_hole_three: e.target.value})
-    }
+        this.setState({ course_par_hole_three: e.target.value});
+    };
 
     handleChangeCourse_par_hole_four = e => {
-        this.setState({ course_par_hole_four: e.target.value})
-    }
+        this.setState({ course_par_hole_four: e.target.value});
+    };
 
     handleChangeCourse_par_hole_five = e => {
-        this.setState({ course_par_hole_five: e.target.value})
-    }
+        this.setState({ course_par_hole_five: e.target.value});
+    };
 
     handleChangeCourse_par_hole_six = e => {
-        this.setState({ course_par_hole_six: e.target.value})
-    }
+        this.setState({ course_par_hole_six: e.target.value});
+    };
 
     handleChangeCourse_par_hole_seven = e => {
-        this.setState({ course_par_hole_seven: e.target.value})
-    }
+        this.setState({ course_par_hole_seven: e.target.value});
+    };
 
     handleChangeCourse_par_hole_eight = e => {
-        this.setState({ course_par_hole_eight: e.target.value})
-    }
+        this.setState({ course_par_hole_eight: e.target.value});
+    };
 
     handleChangeCourse_par_hole_nine = e => {
-        this.setState({ course_par_hole_nine: e.target.value})
-    }
+        this.setState({ course_par_hole_nine: e.target.value});
+    };
 
     handleChangeCourse_par_hole_ten = e => {
-        this.setState({ course_par_hole_ten: e.target.value})
-    }
+        this.setState({ course_par_hole_ten: e.target.value});
+    };
 
     handleChangeCourse_par_hole_eleven = e => {
-        this.setState({ course_par_hole_eleven: e.target.value})
-    }
+        this.setState({ course_par_hole_eleven: e.target.value});
+    };
 
     handleChangeCourse_par_hole_twelve = e => {
-        this.setState({ course_par_hole_twelve: e.target.value})
-    }
+        this.setState({ course_par_hole_twelve: e.target.value});
+    };
 
     handleChangeCourse_par_hole_thirteen = e => {
-        this.setState({ course_par_hole_thirteen: e.target.value})
-    }
+        this.setState({ course_par_hole_thirteen: e.target.value});
+    };
 
     handleChangeCourse_par_hole_fourteen = e => {
-        this.setState({ course_par_hole_fourteen: e.target.value})
-    }
+        this.setState({ course_par_hole_fourteen: e.target.value});
+    };
 
     handleChangeCourse_par_hole_fifteen = e => {
-        this.setState({ course_par_hole_fifteen: e.target.value})
-    }
+        this.setState({ course_par_hole_fifteen: e.target.value});
+    };
 
     handleChangeCourse_par_hole_sixteen = e => {
-        this.setState({ course_par_hole_sixteen: e.target.value})
-    }
+        this.setState({ course_par_hole_sixteen: e.target.value});
+    };
 
     handleChangeCourse_par_hole_seventeen = e => {
-        this.setState({ course_par_hole_seventeen: e.target.value})
-    }
+        this.setState({ course_par_hole_seventeen: e.target.value});
+    };
 
     handleChangeCourse_par_hole_eighteen = e => {
-        this.setState({ course_par_hole_eighteen: e.target.value})
-    }
+        this.setState({ course_par_hole_eighteen: e.target.value});
+    };
 
     handleChangeCourse_summary = e => {
-        this.setState({ course_summary: e.target.value})
-    }
+        this.setState({ course_summary: e.target.value});
+    };
 
     handleChangeCourse_url = e => {
-        this.setState({ course_url: e.target.value})
-    }
+        this.setState({ course_url: e.target.value});
+    };
 
     handleSubmit = e => {
-        e.preventDefault()
-        const { courseId } = this.props.match.params
+        e.preventDefault();
+        const { courseId } = this.props.match.params;
         const { id, name, location, course_distance, course_par, course_par_hole_one, course_par_hole_two,
             course_par_hole_three, course_par_hole_four, course_par_hole_five, course_par_hole_six, 
             course_par_hole_seven, course_par_hole_eight, course_par_hole_nine, course_par_hole_ten, 
             course_par_hole_eleven, course_par_hole_twelve, course_par_hole_thirteen, course_par_hole_fourteen,
             course_par_hole_fifteen, course_par_hole_sixteen, course_par_hole_seventeen, course_par_hole_eighteen,
-            course_summary, course_url } = this.state
+            course_summary, course_url } = this.state;
         const newCourse = { id, name, location, course_distance, course_par, course_par_hole_one, course_par_hole_two,
             course_par_hole_three, course_par_hole_four, course_par_hole_five, course_par_hole_six, 
             course_par_hole_seven, course_par_hole_eight, course_par_hole_nine, course_par_hole_ten, 
             course_par_hole_eleven, course_par_hole_twelve, course_par_hole_thirteen, course_par_hole_fourteen,
             course_par_hole_fifteen, course_par_hole_sixteen, course_par_hole_seventeen, course_par_hole_eighteen,
-            course_summary, course_url }
+            course_summary, course_url };
         fetch(`${config.API_ENDPOINT}/api/courses/${courseId}`, {
           method: 'PATCH',
           body: JSON.stringify(newCourse),
@@ -214,19 +214,19 @@ class EditCourse extends Component {
           },
         })
           .then(res => {
-            if (!res.ok)
-              return res.json().then(error => Promise.reject(error))
+            if (!res.ok);
+              return res.json().then(error => Promise.reject(error));
           })
           .then(() => {
-            this.resetFields(newCourse)
-            this.context.updateCourse(newCourse)
-            this.props.history.push(`/course-page/${courseId}`)
+            this.resetFields(newCourse);
+            this.context.updateCourse(newCourse);
+            this.props.history.push(`/course-page/${courseId}`);
           })
           .catch(error => {
-            console.error(error)
-            this.setState({ error })
-          })
-      }
+            console.error(error);
+            this.setState({ error });
+          });
+      };
     
       resetFields = (newFields) => {
         this.setState({
@@ -255,12 +255,12 @@ class EditCourse extends Component {
             course_par_hole_eighteen: newFields.course_par_hole_eighteen || '',
             course_summary: newFields.course_summary || '',
             course_url: newFields.course_url || '',
-        })
-      }
+        });
+      };
     
       handleClickCancel = () => {
-        const { courseId } = this.props.match.params
-        this.props.history.push(`/course-page/${courseId}`)
+        const { courseId } = this.props.match.params;
+        this.props.history.push(`/course-page/${courseId}`);
       };
 
   render() {
@@ -269,7 +269,7 @@ class EditCourse extends Component {
         course_par_hole_seven, course_par_hole_eight, course_par_hole_nine, course_par_hole_ten, 
         course_par_hole_eleven, course_par_hole_twelve, course_par_hole_thirteen, course_par_hole_fourteen,
         course_par_hole_fifteen, course_par_hole_sixteen, course_par_hole_seventeen, course_par_hole_eighteen,
-        course_summary, course_url } = this.state
+        course_summary, course_url } = this.state;
     return (
       <div className="EditCoursePage">
         <div className="EditCoursePage__heading">
@@ -701,7 +701,7 @@ class EditCourse extends Component {
         </form>
         </div>
     );
-  }
-}
+  };
+};
 
 export default EditCourse;
