@@ -16,7 +16,6 @@ class AddCourse extends Component {
           body: JSON.stringify(course),
         })
           .then(res => {
-            console.log(JSON.stringify(course));
             return res.json();
           })
           .then(resJSON => this.context.addCourse(resJSON))
