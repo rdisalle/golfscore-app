@@ -12,16 +12,12 @@ exports[`ViewCourseList component renders a .ViewCourseList by default 1`] = `
   </Link>
   <ul
     className="ViewCourseList_list"
-  >
-    ;
-  </ul>
+  />
 </div>
 `;
 
 exports[`ViewCourseList component renders a Course in ul for each course in array 1`] = `
 <ul
   className="ViewCourseList_list"
->
-  ;
-</ul>
+/>
 `;
