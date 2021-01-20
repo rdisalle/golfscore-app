@@ -65,7 +65,7 @@ class ViewCourseList extends Component {
               </span>
           </div>
             </li>
-          )
+          )}
         </ul>
       </div>
     );
