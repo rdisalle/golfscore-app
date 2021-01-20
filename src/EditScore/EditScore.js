@@ -94,95 +94,95 @@ class EditScore extends Component {
       };
 
     handleChangeName = e => {
-        this.setState({ name: e.target.value });
+        this.setState({ name: e.target.value })
     };
 
     handleChangeDate_modified = e => {
-        this.setState({ date_modified: e.target.value});
+        this.setState({ date_modified: e.target.value})
     };
 
     handleChangeCourse_id = e => {
-        this.setState({ course_id: e.target.value});
+        this.setState({ course_id: e.target.value})
     };
 
     handleChangeScore_hole_one = e => {
-        this.setState({ score_hole_one: e.target.value});
+        this.setState({ score_hole_one: e.target.value})
     };
 
     handleChangeScore_hole_two = e => {
-        this.setState({ score_hole_two: e.target.value});
+        this.setState({ score_hole_two: e.target.value})
     };
 
     handleChangeScore_hole_three = e => {
-        this.setState({ score_hole_three: e.target.value});
+        this.setState({ score_hole_three: e.target.value})
     };
 
     handleChangeScore_hole_four = e => {
-        this.setState({ score_hole_four: e.target.value});
+        this.setState({ score_hole_four: e.target.value})
     };
 
     handleChangeScore_hole_five = e => {
-        this.setState({ score_hole_five: e.target.value});
+        this.setState({ score_hole_five: e.target.value})
     };
 
     handleChangeScore_hole_six = e => {
-        this.setState({ score_hole_six: e.target.value});
+        this.setState({ score_hole_six: e.target.value})
     };
 
     handleChangeScore_hole_seven = e => {
-        this.setState({ score_hole_seven: e.target.value});
+        this.setState({ score_hole_seven: e.target.value})
     };
 
     handleChangeScore_hole_eight = e => {
-        this.setState({ score_hole_eight: e.target.value});
+        this.setState({ score_hole_eight: e.target.value})
     };
 
     handleChangeScore_hole_nine = e => {
-        this.setState({ score_hole_nine: e.target.value});
+        this.setState({ score_hole_nine: e.target.value})
     };
 
     handleChangeScore_hole_ten = e => {
-        this.setState({ score_hole_ten: e.target.value});
+        this.setState({ score_hole_ten: e.target.value})
     };
 
     handleChangeScore_hole_eleven = e => {
-        this.setState({ score_hole_eleven: e.target.value});
+        this.setState({ score_hole_eleven: e.target.value})
     };
 
     handleChangeScore_hole_twelve = e => {
-        this.setState({ score_hole_twelve: e.target.value});
+        this.setState({ score_hole_twelve: e.target.value})
     };
 
     handleChangeScore_hole_thirteen = e => {
-        this.setState({ score_hole_thirteen: e.target.value});
+        this.setState({ score_hole_thirteen: e.target.value})
     };
 
     handleChangeScore_hole_fourteen = e => {
-        this.setState({ score_hole_fourteen: e.target.value});
+        this.setState({ score_hole_fourteen: e.target.value})
     };
 
     handleChangeScore_hole_fifteen = e => {
-        this.setState({ score_hole_fifteen: e.target.value});
+        this.setState({ score_hole_fifteen: e.target.value})
     };
 
     handleChangeScore_hole_sixteen = e => {
-        this.setState({ score_hole_sixteen: e.target.value});
+        this.setState({ score_hole_sixteen: e.target.value})
     };
 
     handleChangeScore_hole_seventeen = e => {
-        this.setState({ score_hole_seventeen: e.target.value});
+        this.setState({ score_hole_seventeen: e.target.value})
     };
 
     handleChangeScore_hole_eighteen = e => {
-        this.setState({ score_hole_eighteen: e.target.value});
+        this.setState({ score_hole_eighteen: e.target.value})
     };
 
     handleChangeTotal_score = e => {
-        this.setState({ total_score: e.target.value});
+        this.setState({ total_score: e.target.value})
     };
 
     handleChangeTo_par = e => {
-        this.setState({ to_par: e.target.value});
+        this.setState({ to_par: e.target.value})
     };
 
     handleSubmit = e => {
