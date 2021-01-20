@@ -61,7 +61,7 @@ class ViewCourseList extends Component {
               />
               <div className="ViewCourseList_score">
               <span className="ViewCourseList_num-scores">
-                  Scores: ({this.countScoresForCourse(scores, course.id)});
+                  Scores: ({this.countScoresForCourse(scores, course.id)})
               </span>
           </div>
             </li>
